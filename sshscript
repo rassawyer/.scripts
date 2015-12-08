@@ -1,0 +1,4 @@
+#!/bin/bash
+ssh-add /home/rassawyer/.ssh/godaddy
+
+rsync -avz ~/.scripts/lists/ robbie12abby@truegeekllc.com:/home/robbie12abby/Dropbox/lists/

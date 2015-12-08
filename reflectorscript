@@ -1,0 +1,30 @@
+#!/bin/bash
+
+echo "This will run reflector on mirrorlist, getting the most recent mirrorlist, then copying it into the local location."
+
+echo "Checking for root access to write mirrorlist to pacman.d..."
+
+if [ "$(id -u)" != "0" ] ;
+then
+	echo "No root access found, elevating permissions..."
+	[ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
+fi
+
+echo "Getting most recent mirrorlist..."
+
+curl -o /etc/pacman.d/mirrorlist.backup https://www.archlinux.org/mirrorlist/all/
+	
+echo "Gained root access; continuing."
+
+echo "Writing new mirrorlist to local mirrorlist..."
+
+cp /etc/pacman.d/mirrorlist.backup /etc/pacman.d/mirrorlist
+
+sudo -k
+
+
+echo "Ranking mirriorlist by date and speed..."
+
+reflector --verbose --country 'United States' -l 200 -f 200 -p rsync --sort rate --save /etc/pacman.d/mirrorlist
+
+echo "Completed; Exiting"

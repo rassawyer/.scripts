@@ -1,0 +1,55 @@
+#!/bin/bash
+echo "Checking for root..."
+if [ "$(id -u)" != "0" ] ;
+then
+	echo "No root access found, elevating permissions..."
+	[ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
+fi
+
+echo "Password accepted; Proceeding"
+
+echo "Backing up pacman database..."
+
+tar -cjf /home/rassawyer/.bak/pacman-database.tar.bz2 /var/lib/pacman/local
+
+echo "Removing unused packages..."
+
+pacman -Rscn $(pacman -Qtdq)
+
+echo "Updating signature keys..."
+
+pacman-key --populate archlinux
+
+echo "Checking for updates..."
+
+pacman -Sc
+
+echo "Optimizing database..."
+
+pacman-optimize && sync
+
+echo "Updating database..."
+
+updatedb
+
+echo "Performing system upgrade..."
+
+pacman -Syu
+
+sudo -k
+
+echo "Optimize and upgrade successful; exiting..."
+
+pacman -Qqen > official.list
+
+pacman -Qq > complete.list
+
+comm -2 -3  /home/rassawyer/.scripts/lists/complete.list  /home/rassawyer/.scripts/lists/official.list  >  /home/rassawyer/.scripts/lists/aur.list
+
+eval `ssh-agent`
+
+ssh-add /home/rassawyer/.ssh/godaddy
+
+rsync -avz /home/rassawyer/.scripts/lists/ robbie12abby@truegeekllc.com:/home/robbie12abby/Dropbox/lists/
+
+exit 0
