@@ -24,13 +24,13 @@ echo "Checking for updates..."
 
 pacman -Sc
 
-echo "Optimizing database..."
-
-pacman-optimize && sync
-
 echo "Updating database..."
 
 updatedb
+
+echo "Optimizing database..."
+
+pacman-optimize && sync
 
 echo "Performing system upgrade..."
 
@@ -38,7 +38,7 @@ pacman -Syu
 
 sudo -k
 
-echo "Optimize and upgrade successful; exiting..."
+echo "Optimize and update successful; exiting..."
 
 pacman -Qqen > official.list
 
