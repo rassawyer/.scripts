@@ -1,4 +1,0 @@
-#! /bin/bash
-cd /home/rassawyer/.conky
-ruby starter.rb
-echo "conky is started" && exit

@@ -12,17 +12,15 @@ echo "Backing up pacman database..."
 
 tar -cjf /home/rassawyer/.bak/pacman-database.tar.bz2 /var/lib/pacman/local
 
-echo "Removing unused packages..."
+echo "Removing unneeded packages..."
 
-pacman -Rscn $(pacman -Qtdq)
+paccache -r
 
 echo "Updating signature keys..."
 
 pacman-key --populate archlinux
 
 echo "Checking for updates..."
-
-pacman -Sc
 
 echo "Updating database..."
 

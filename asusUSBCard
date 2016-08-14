@@ -1,0 +1,12 @@
+if [[ "$*" == "-c" ]]; then
+sudo ip link set USBCard down
+sudo ip link set USBCard down
+sudo macchanger --mac=48:5B:39:E8:4D:B2 USBCard
+sudo ip link set USBCard up
+
+elif [[ "$*" == "-r" ]]; then
+sudo ip link set USBCard down
+sudo ip link set USBCard down
+sudo macchanger -r USBCard
+sudo ip link set USBCard up
+fi

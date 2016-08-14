@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Terminal=false
+Exec="/home/rassawyer/Downloads/xdm/jre/bin/java" -jar "/home/rassawyer/Downloads/xdm/xdm.jar"
+Name=Xtreme Download Manager
+Comment=Powerfull download accelarator and video downloader
+Categories=Network;
+Icon=/home/rassawyer/Downloads/xdm/icon.png

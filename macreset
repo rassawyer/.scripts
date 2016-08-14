@@ -1,0 +1,4 @@
+sudo ip link set Internal down
+sudo ip link set Internal down
+sudo macchanger -r Internal
+sudo ip link set Internal up
