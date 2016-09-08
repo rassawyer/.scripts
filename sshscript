@@ -1,4 +1,6 @@
 #!/bin/bash
+eval $(ssh-agent)
+
 ssh-add /home/rassawyer/.ssh/godaddy
 
-rsync -avz ~/.scripts/lists/ robbie12abby@truegeekllc.com:/home/robbie12abby/Dropbox/lists/
+ssh-add /home/rassawyer/.ssh/id_rsa

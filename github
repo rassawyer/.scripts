@@ -1,3 +1,5 @@
 eval "$(ssh-agent -s)"
+ssh-add /home/rassawyer/.ssh/id_rsa
+ssh -p 29418 rassawyer@review.pac-rom.com
 ssh-add /home/rassawyer/.ssh/github
 ssh -T git@github.com
