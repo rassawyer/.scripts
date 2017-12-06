@@ -1,6 +1,0 @@
-#!/bin/bash
-eval $(ssh-agent)
-
-ssh-add /home/rassawyer/.ssh/godaddy
-
-ssh-add /home/rassawyer/.ssh/id_rsa
