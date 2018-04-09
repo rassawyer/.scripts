@@ -1,0 +1,17 @@
+echo "Checking for root..."
+if [ "$(id -u)" != "0" ] ;
+then
+    echo "No root access found, elevating permissions..."
+    [ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
+fi
+
+
+killall wpa_supplicant
+
+killall dhcpcd
+
+wpa_supplicant -B -i wlp36s0 -c <(wpa_passphrase "Essential" "ComputerGuy")
+
+dhcpcd wlp36s0
+
+ping -c 3 google.com

@@ -1,9 +1,0 @@
-#!/bin/bash
-
-cd /home/rassawyer/android/LG/D580_6.0/out/target/product/d850/
-
-eval $(ssh-agent)
-
-ssh-add /home/rassawyer/.ssh/godaddy
-
-rsync -avz --progress pac_d850_MM.*  robbie12abby@truegeekllc.com:public_html/Downloads/D850/PAC-ROM/6.0/

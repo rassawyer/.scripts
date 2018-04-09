@@ -25,6 +25,6 @@ sudo -k
 
 echo "Ranking mirriorlist by date and speed..."
 
-reflector --verbose --country 'United States' -l 200 -f 200 -p rsync --sort rate --save /etc/pacman.d/mirrorlist
+reflector --verbose --country 'United States' -l 200 -f 200 -p https --sort rate --save /etc/pacman.d/mirrorlist
 
 echo "Completed; Exiting"

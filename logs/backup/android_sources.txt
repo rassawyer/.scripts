@@ -1,2 +1,0 @@
-rsync: mkdir "/run/media/rassawyer/Ext4/Backups/android" failed: No such file or directory (2)
-rsync error: error in file IO (code 11) at main.c(657) [Receiver=3.1.2]
