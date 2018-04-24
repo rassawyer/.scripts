@@ -1,0 +1,1 @@
+/home/rassawyer/.scripts/dotFiles/xinitrc
