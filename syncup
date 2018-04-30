@@ -1,0 +1,17 @@
+## make sure the ssh agent is running
+eval 'ssh-sgent'
+
+## Add ssh keys to allow automatic login
+ssh-add /home/rassawyer.ssh/github
+
+## cd to the correct directory, using absolute paths
+cd /home/rassawyer/.scripts
+
+## add any untracked files, and any changes
+git add .
+
+## commit the new and modified files.
+git commit
+
+## push the changes to github
+git push
