@@ -8,10 +8,8 @@ ssh-add /home/rassawyer.ssh/github
 cd /home/rassawyer/.scripts
 
 ## add any untracked files, and any changes
-git add .
-
 ## commit the new and modified files.
-git commit
+git commit -am 'updated package lists'
 
 ## push the changes to github
 git push
