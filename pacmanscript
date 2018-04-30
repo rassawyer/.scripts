@@ -42,4 +42,6 @@ pacman -Qqnt > /home/rassawyer/.scripts/lists/official.list
 
 pacman -Qqm > /home/rassawyer/.scripts/lists/manual.list
 
+syncup
+
 exit 0
