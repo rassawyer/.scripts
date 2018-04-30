@@ -232,6 +232,7 @@ casefile
 catnthecanary
 catphish
 cdpsnarf
+cdrdao
 cecster
 centry
 cewl
@@ -918,10 +919,14 @@ lfisuite
 lfle
 lft
 lhf
+libbde
+libbfio
 libdisasm
+libpff
 libpst
 libreoffice-fresh
 libtool
+libvshadow
 licenses
 liffy
 lightbulb
@@ -1044,6 +1049,7 @@ mots
 motsa-dns-spoofing
 mousejack
 mp3nema
+mpc
 mpd
 mptcp
 mptcp-abuse
@@ -1159,6 +1165,7 @@ openvas-scanner
 operative
 orakelcrackert
 origami
+os-prober
 oscanner
 osint-spy
 osinterator
@@ -1338,6 +1345,7 @@ pyssltest
 pytacle
 pytbull
 pythem
+python-scapy
 python-utidylib
 python2-wxpython3
 qark
@@ -1824,6 +1832,8 @@ voiphopper
 voipong
 volafox
 voltron
+vorbis-tools
+vorbisgain
 vpnpivot
 vsaudit
 vscan
@@ -1926,6 +1936,7 @@ x-scan
 x64dbg
 xcat
 xcavator
+xclip
 xcname
 xf86-video-vesa
 xfltreat

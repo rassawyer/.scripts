@@ -32,7 +32,7 @@ pacman-optimize && sync
 
 echo "Performing system upgrade..."
 
-pacman -Syu
+pacman -Syyu
 
 sudo -k
 
@@ -46,8 +46,8 @@ comm -2 -3  /home/rassawyer/.scripts/lists/complete.list  /home/rassawyer/.scrip
 
 eval `ssh-agent`
 
-ssh-add /home/rassawyer/.ssh/godaddy
+ssh-add /home/rassawyer/.ssh/host4geeks
 
-rsync -avz /home/rassawyer/.scripts/lists/ robbie12abby@truegeekllc.com:/home/robbie12abby/lists/
+rsync -avz /home/rassawyer/.scripts/lists/ rassawyer@truegeekllc.com:/home/rassawyer/lists/
 
 exit 0

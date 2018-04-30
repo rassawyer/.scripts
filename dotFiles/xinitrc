@@ -54,4 +54,5 @@ fi
 #xterm -geometry 80x20+494-0 &
 ~/.fehbg &
 udiskie &
+numlockx &
 exec i3

@@ -241,6 +241,7 @@ braces
 bridge-utils
 bro
 brosec
+brotli
 brotli06
 browselist
 browser-fuzzer
@@ -278,6 +279,7 @@ cabextract
 cachedump
 cadaver
 cadence
+caffeine-ng
 cairo
 cairo-perl
 cairomm
@@ -297,6 +299,7 @@ cblas
 ccache
 cdparanoia
 cdpsnarf
+cdrdao
 cdrtools
 cecster
 celt
@@ -375,6 +378,7 @@ coffeescript
 colord
 comission
 commix
+compiler-rt
 complemento
 configpush
 confuse
@@ -479,7 +483,6 @@ device-mapper
 device-pharmer
 dex2jar
 dexpatcher
-dff
 dff-scanner
 dga-detection
 dhcdrop
@@ -783,6 +786,7 @@ geckodriver
 gedit
 gef
 gegl02
+gendesk
 genlist
 geoclue2
 geoedge
@@ -795,6 +799,7 @@ getsploit
 gettext
 gflags
 gggooglescan
+ghc
 ghc-libs
 ghettotooth
 ghost-phisher
@@ -960,6 +965,7 @@ haskell-digest
 haskell-dlist
 haskell-doctemplates
 haskell-exceptions
+haskell-extensible-exceptions
 haskell-foundation
 haskell-glob
 haskell-haddock-library
@@ -1003,6 +1009,7 @@ haskell-resourcet
 haskell-safe
 haskell-scientific
 haskell-semigroups
+haskell-setlocale
 haskell-sha
 haskell-skylighting
 haskell-socks
@@ -1026,6 +1033,8 @@ haskell-unordered-containers
 haskell-utf8-string
 haskell-uuid-types
 haskell-vector
+haskell-x11
+haskell-x11-xft
 haskell-x509
 haskell-x509-store
 haskell-x509-system
@@ -1242,6 +1251,7 @@ jre9-openjdk
 jre9-openjdk-headless
 js
 js185
+js52
 json-c
 json-glib
 jsoncpp
@@ -1316,6 +1326,7 @@ lame
 lanmap2
 lans
 lapack
+lash
 latd
 laudanum
 lbd
@@ -1356,6 +1367,7 @@ lib32-e2fsprogs
 lib32-expat
 lib32-fontconfig
 lib32-freetype2
+lib32-fribidi
 lib32-gcc-libs
 lib32-gdk-pixbuf2
 lib32-gettext
@@ -1520,6 +1532,7 @@ libgssglue
 libgtop
 libgudev
 libgusb
+libibus
 libical
 libice
 libid3tag
@@ -1537,6 +1550,7 @@ libldap
 liblo
 liblognorm
 liblouis
+liblphobos
 liblqr
 liblrdf
 libmad
@@ -1570,10 +1584,12 @@ libnfnetlink
 libnfs
 libnftnl
 libnghttp2
+libnice
 libnids
 libnl
 libnl1
 libnotify
+libnsl
 libodfgen
 libofa
 libogg
@@ -1790,6 +1806,7 @@ mara-framework
 marc4dasm
 mariadb
 mariadb-clients
+mariadb-jdbc
 maryam
 maskprocessor
 massbleed
@@ -1884,6 +1901,7 @@ motsa-dns-spoofing
 mousejack
 mozilla-common
 mp3nema
+mpc
 mpd
 mpfr
 mptcp
@@ -1978,6 +1996,7 @@ nkiller2
 nmap
 nmbscan
 node-ar-drone
+node-gyp
 nodejs
 nohidy
 nomorexor
@@ -2062,6 +2081,7 @@ orakelcrackert
 orbited
 orc
 origami
+os-prober
 oscanner
 osint-spy
 osinterator
@@ -2267,6 +2287,7 @@ perl-log-message-simple
 perl-lwp-mediatypes
 perl-lwp-protocol-https
 perl-lwp-useragent-proxyany
+perl-mailtools
 perl-math-bigint-gmp
 perl-math-gmp
 perl-math-pari
@@ -2360,6 +2381,7 @@ perl-tftp
 perl-tie-encryptedhash
 perl-tie-hash-indexed
 perl-time-interval
+perl-timedate
 perl-tk
 perl-tree-dag-node
 perl-try-tiny
@@ -2446,7 +2468,6 @@ polkit-qt5
 pompem
 poppler
 poppler-glib
-poppler-qt4
 poppler-qt5
 popt
 poracle
@@ -2540,6 +2561,7 @@ python
 python-aiohttp
 python-amqp
 python-aniso8601
+python-anytree
 python-appdirs
 python-argh
 python-argparse
@@ -2598,6 +2620,7 @@ python-engineio
 python-enum-compat
 python-et-xmlfile
 python-eventlet
+python-ewmh
 python-fake-useragent
 python-feedparser
 python-filebytes
@@ -2654,6 +2677,7 @@ python-mako
 python-markupsafe
 python-mido
 python-mock
+python-more-itertools
 python-msgpack
 python-multidict
 python-netaddr
@@ -2736,11 +2760,13 @@ python-ropper
 python-rsa
 python-ruamel-yaml
 python-s3transfer
+python-scapy
 python-scipy
 python-screenutils
 python-scruffy
 python-selenium
 python-service-identity
+python-setproctitle
 python-setuptools
 python-sgmllib
 python-simple-requests
@@ -2774,10 +2800,13 @@ python-wcwidth
 python-webencodings
 python-websocket-client
 python-werkzeug
+python-wheel
 python-whois
 python-win_inet_pton
 python-wsproto
 python-wtforms
+python-xdg
+python-xlib
 python-xlrd
 python-xlsxwriter
 python-xmltodict
@@ -2811,6 +2840,7 @@ python2-backports
 python2-backports-abc
 python2-backports.functools_lru_cache
 python2-backports.shutil_get_terminal_size
+python2-backports.unittest_mock
 python2-bacpypes
 python2-bcrypt
 python2-beaker
@@ -2999,6 +3029,7 @@ python2-jsbeautifier
 python2-json2html
 python2-jsonrpclib-pelix
 python2-keystone
+python2-kiwisolver
 python2-kombu
 python2-ldap
 python2-levenshtein
@@ -3029,6 +3060,7 @@ python2-mockito
 python2-modbus-tk
 python2-more-itertools
 python2-mpmath
+python2-mr.bob
 python2-msgpack
 python2-mulpyplexer
 python2-multipartposthandler
@@ -3084,7 +3116,6 @@ python2-plumbum
 python2-ply
 python2-pmw
 python2-poppler
-python2-poppler-qt4
 python2-portend
 python2-poster
 python2-praw
@@ -3230,7 +3261,10 @@ python2-ropper
 python2-rpi-gpio
 python2-rpyc
 python2-rsa
+python2-s3transfer
+python2-safedexml
 python2-scandir
+python2-scapy
 python2-schema
 python2-scipy
 python2-scp
@@ -3344,12 +3378,15 @@ python2-xhtml2pdf
 python2-xlrd
 python2-xlsx2csv
 python2-xlsxwriter
+python2-xlutils
+python2-xlwt
 python2-xmltodict
 python2-xtermcolor
 python2-yaml
 python2-yapsy
 python2-yara
 python2-yaraprocessor
+python2-yattag
 python2-zlib_wrapper
 python2-zope-interface
 pythonect
@@ -3361,6 +3398,7 @@ qscintilla-qt4
 qt3
 qt4
 qt5-base
+qt5-charts
 qt5-declarative
 qt5-location
 qt5-multimedia
@@ -3546,7 +3584,6 @@ scanmem
 scannerl
 scansploit
 scanssh
-scapy
 scapy3k
 schedtool
 schnappi-dhcp
@@ -3568,6 +3605,7 @@ sdn-toolkit
 sdnpwn
 sea
 search1337
+searchsploit
 seat
 secscan
 secure-delete
@@ -3740,6 +3778,7 @@ sqlpowerinjector
 sqlsus
 squashfs-tools
 sratom
+srt
 ssdeep
 ssdp-scanner
 ssh-audit
@@ -3878,6 +3917,7 @@ tinfoleak
 tinfoleak2
 tinycdb
 tinyproxy
+tinyxml
 tk
 tls-attacker
 tls-fingerprinting
@@ -4033,6 +4073,8 @@ volafox
 volatility
 voltron
 volume_key
+vorbis-tools
+vorbisgain
 vpnpivot
 vsaudit
 vscan
@@ -4130,6 +4172,7 @@ witchxtool
 wlan2eth
 wmat
 wnmap
+woff2
 wol-e
 wolpertinger
 wordbrutepress
@@ -4173,6 +4216,7 @@ xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
 xcb-util-xrm
+xclip
 xcname
 xdg-utils
 xdotool
@@ -4183,6 +4227,8 @@ xfsprogs
 xkeyboard-config
 xml2
 xmlsec
+xmonad-contrib-git
+xmonad-git
 xmpppy
 xorbruteforcer
 xorg-bdftopcf
