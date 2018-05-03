@@ -9,3 +9,6 @@ ln -sf ~/.scripts/dotFiles/i3 ~/.config/i3/config
 ## remove ~/.xinitrc and replace with softlink to custom version
 rm -rfv ~/.xinitrc
 ln -sf ~/.scripts/dotFiles/xinitrc ~/.xinitrc
+
+## Create .bak directory under /home/$USER to store the backups of pacman db
+mkdir /home/$USER/.bak

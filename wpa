@@ -10,8 +10,8 @@ killall wpa_supplicant
 
 killall dhcpcd
 
-wpa_supplicant -B -i wlp36s0 -c <(wpa_passphrase "Essential" "ComputerGuy")
+wpa_supplicant -B -i wlp6s0 -c <(wpa_passphrase "Essential" "ComputerGuy")
 
-dhcpcd wlp36s0
+dhcpcd wlp6s0
 
 ping -c 3 google.com
