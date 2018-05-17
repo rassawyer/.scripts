@@ -32,9 +32,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias conky='conkyscript && lxterminal && exit'
 alias git-pl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-##SSH Key Configuration########################################################
-
-eval "$(ssh-agent)"
 
 ##Set Commandline Prefix#######################################################
 PS1='[\u@\h \W]\$ '

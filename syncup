@@ -1,5 +1,5 @@
 ## make sure the ssh agent is running
-eval 'ssh-sgent'
+eval 'ssh-agent'
 
 ## Add ssh keys to allow automatic login
 ssh-add /home/rassawyer.ssh/github
