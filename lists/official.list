@@ -535,7 +535,6 @@ fport
 fprotlogparser
 fraud-bridge
 freeipmi
-fridump
 frisbeelite
 fs-exploit
 fs-nyarl
@@ -642,6 +641,7 @@ heartleech
 hemingway
 hercules-payload
 hex2bin
+hexchat
 hexinject
 hexorbase
 hharp
@@ -733,7 +733,6 @@ inviteflood
 inzider
 iosforensic
 ip-https-tools
-ip2clue
 ipaudit
 ipba2
 ipdecap
@@ -1039,6 +1038,7 @@ ntp-ip-enum
 ntpdos
 nullinux
 numlockx
+nvidia
 o-saft
 oat
 obevilion
@@ -1244,6 +1244,7 @@ python-watchdog
 qark
 quickrecon
 quicksand-lite
+qutebrowser
 radare2-keystone
 radiography
 rainbowcrack
@@ -1732,6 +1733,7 @@ websockify
 webspa
 websploit
 webxploiter
+weechat
 weeman
 weevely
 wfuzz
@@ -1745,7 +1747,6 @@ wifi-monitor
 wifi-pumpkin
 wifichannelmonitor
 wificurse
-wifiphisher
 wifiscanmap
 wifitap
 wifite
@@ -1802,8 +1803,6 @@ xorg-docs
 xorg-fonts-100dpi
 xorg-fonts-75dpi
 xorg-iceauth
-xorg-server
-xorg-server-devel
 xorg-server-xdmx
 xorg-server-xephyr
 xorg-server-xnest
