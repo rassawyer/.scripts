@@ -6,4 +6,4 @@ On my system, these scripts are all located in ~/.scripts, which is added to my 
 
 The script entitled setup.sh will clone this repository and setup a system to use my custom dotfiles, etc.
 
-Note: All of these scripts and dotfiles are configured based on my username. I will begin the process of making them relative based on $HOME, but it may take me some time to get them all modified.
+NOTE: these scripts have recently been updated to use $HOME instead of absolute paths to my home folder. Many of them have not yet been tested since that change.
