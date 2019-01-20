@@ -20,7 +20,7 @@ else [ $a = "4" ] ;
 fi
 
 ##EXPORTS#######################################################################
-export PATH="/usr/lib/ccache/bin/:/home/rassawyer/.scripts/:/home/rassawyer/.gem/:$PATH"
+export PATH="/usr/lib/ccache/bin/:$HOME/.scripts/:$HOME/.gem/:$PATH"
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export TO_OR=32

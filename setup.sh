@@ -1,17 +1,17 @@
 # pull any missing sripts and dotfiles from github
 git clone https://github.com/rassawyer/.scripts.git
 
-# remove ~/.bashrc and replice it with a softlink to custom version.
-rm -rfv ~/.bashrc
-ln -sf ~/.scripts/dotFiles/bashrc ~/.bashrc
+# remove $HOME.bashrc and replice it with a softlink to custom version.
+rm -rfv $HOME.bashrc
+ln -sf $HOME.scripts/dotFiles/bashrc $HOME.bashrc
 
 # remove existing i3 config file, and replace with a softlink to custom version 
-rm -rfv ~/.config/i3/config
-ln -sf ~/.scripts/dotFiles/i3 ~/.config/i3/config
+rm -rfv $HOME.config/i3/config
+ln -sf $HOME.scripts/dotFiles/i3 $HOME.config/i3/config
 
-# remove ~/.xinitrc and replace with softlink to custom version
-rm -rfv ~/.xinitrc
-ln -sf ~/.scripts/dotFiles/xinitrc ~/.xinitrc
+# remove $HOME.xinitrc and replace with softlink to custom version
+rm -rfv $HOME.xinitrc
+ln -sf $HOME.scripts/dotFiles/xinitrc $HOME.xinitrc
 
-# Create .bak directory under /home/$USER to store the backups of pacman db
-mkdir /home/$USER/.bak
+# Create .bak directory under $HOME to store the backups of pacman db
+mkdir $HOME/.bak
