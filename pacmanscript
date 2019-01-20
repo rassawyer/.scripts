@@ -20,8 +20,6 @@ echo "Updating signature keys..."
 
 pacman-key --populate archlinux
 
-echo "Checking for updates..."
-
 echo "Updating database..."
 
 updatedb
@@ -30,17 +28,19 @@ echo "Optimizing database..."
 
 pacman-optimize && sync
 
-echo "Performing system upgrade..."
+echo "Checking for updates and Performing system upgrade..."
 
 pacman -Syyu
 
 sudo -k
 
-echo "Optimize and update successful; exiting..."
+echo "Optimize and update successful; Generating updated package lists..."
 
 pacman -Qqnt > /home/rassawyer/.scripts/lists/official.list
 
 pacman -Qqm > /home/rassawyer/.scripts/lists/manual.list
+
+echo "Pushing updated lists to remote"
 
 syncup
 

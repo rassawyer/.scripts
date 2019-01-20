@@ -1,15 +1,15 @@
 ## make sure the ssh agent is running
-eval 'ssh-agent'
+eval `ssh-agent`
 
 ## Add ssh keys to allow automatic login
-ssh-add /home/rassawyer.ssh/github
+ssh-add /home/rassawyer/.ssh/github
 
 ## cd to the correct directory, using absolute paths
 cd /home/rassawyer/.scripts
 
 ## add any untracked files, and any changes
 ## commit the new and modified files.
-git commit -am 'updated package lists'
+git commit -m 'updated package lists' ./ /home/rassawyer/.scripts/lists/official.list /home/rassawyer/.scripts/lists/manual.list
 
 ## push the changes to github
 git push
