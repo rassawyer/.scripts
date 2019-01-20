@@ -1,18 +1,17 @@
 #!/bin/bash
 
-echo "$1"
-echo "$2"
-echo "$*"
+# echo "$1"
+# echo "$2"
+# echo "$*"
 
-for i;
-do
+# for i in (1..5); do command here; done
 
-echo "$i"
+# echo "$i"
 
-if [[ "$i" == "-h" ]]; then
-        echo "Options include:"
-        echo "-Y - remove cached versions of uninstalled packaegs."
-        echo "-h - display this help."
-fi
+# if [[ "$i" == "-h" ]]; then
+#        echo "Options include:"
+#        echo "-Y - remove cached versions of uninstalled packaegs."
+#        echo "-h - display this help."
+# fi
 
-done
+# done

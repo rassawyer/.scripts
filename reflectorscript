@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "This will run reflector on mirrorlist, getting the most recent mirrorlist, then copying it into the local location."
+# This will run reflector on mirrorlist, getting the most recent mirrorlist, then copying it into the local location.
 
-echo "Checking for root access to write mirrorlist to pacman.d..."
+# Check for root access to write mirrorlist to pacman.d...
 
 if [ "$(id -u)" != "0" ] ;
 then
@@ -10,18 +10,16 @@ then
 	[ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
 fi
 
-echo "Backing up existing mirror list, in case of issue"
+# Backing up existing mirror list, in case of issue
 mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 
-echo "Getting most recent mirrorlist..."
+# Get most recent mirrorlist...
 
 curl -o /etc/pacman.d/mirrorlist https://www.archlinux.org/mirrorlist/all/
 	
 sudo -k
 
 
-echo "Ranking mirriorlist by date and speed..."
+# Rank mirriorlist by date and speed...
 
 reflector --verbose --country 'United States' -l 200 -f 200 -p https --sort rate --save /etc/pacman.d/mirrorlist
-
-echo "Completed; Exiting"
