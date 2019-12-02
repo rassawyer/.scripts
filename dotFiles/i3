@@ -97,7 +97,7 @@ bindsym Mod1+space focus mode_toggle
 bindsym Mod1+a focus parent
 
 # focus the child container
-#bindsym Mod1+d focus child
+# bindsym Mod1+d focus child
 
 # move the currently focused window to the scratchpad
 bindsym Mod1+Shift+minus move scratchpad
@@ -174,7 +174,7 @@ bar {
 # Custom keybindings [Audio] (Search parameters: volume, audio, mute, unmute)
 bindsym --release XF86AudioRaiseVolume exec amixer sset Master 1%+
 bindsym --release XF86AudioLowerVolume exec amixer sset Master 1%-
-bindsym --release XF86AudioMute exec amixer sset Master toggle
+bindsym --release XF86AudioMute exec amixer set IEC958 toggle
 
 #bindsym Mod1+0xffc6 exec amixer sset Master 100%-
 #bindsym Mod1+0xffc7 exec amixer sset Master 5%-

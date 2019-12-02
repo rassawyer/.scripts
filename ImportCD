@@ -1,3 +1,51 @@
-cdparanoia -B
-oggenc *.wav
+#! /bin/bash
+###############################################################################
+
+## Check working directory, and change it if needed
+
+if [[ $PWD == "/home/rassawyer/Media/New/CDs/" ]]; then
+    echo $PWD
+
+else
+    cd $HOME/Media/New/CDs
+fi
+
+###############################################################################
+
+## Check that valid arguments exist
+
+if [[ -z "$*" ]]; then
+    echo "-f imports as flac; -o import as ogg-vorbis"
+    return 1
+
+elif [[ "$*" == "-h" ]]; then
+    echo "-f imports as flac; -o import as ogg-vorbis"
+    return 1
+
+else
+    ## Import wav files from CD 
+    cdparanoia -B
+fi
+
+###############################################################################
+
+## Use argument to determine which format to encode to
+
+if [[ "$*" == "-f" ]]; then
+    ## Transcode wav files to flac
+    flac *.wav
+
+elif [[ "$*" == "-o" ]]; then
+    ## Transcode wav file to ogg-vorbis
+    oggenc *.wav
+
+fi
+
+###############################################################################
+
+## Move FLAC files to where they can be scanned by Picard/FileBot
+
+mkdir /home/$USER/Media/New/CDs/
+mv *.flac /home/$USER/Media/New/CDs/
+## Remove wav files
 rm -rf *.wav

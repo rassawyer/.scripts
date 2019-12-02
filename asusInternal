@@ -1,4 +1,4 @@
-f [[ "$*" == "-c" ]]; then
+if [[ "$*" == "-c" ]]; then
 sudo ip link set Internal down
 sudo ip link set Internal down
 sudo macchanger --mac=48:5B:39:E8:4D:B2 Internal

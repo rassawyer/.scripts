@@ -9,7 +9,7 @@ cd $HOME/.scripts
 
 ## add any untracked files, and any changes
 ## commit the new and modified files.
-git commit -m 'updated package lists' ./ $HOME/.scripts/lists/official.list $HOME/.scripts/lists/manual.list
+git commit -m 'updated package lists' $HOME/.scripts/lists/official.list $HOME/.scripts/lists/manual.list
 
 ## push the changes to github
 git push

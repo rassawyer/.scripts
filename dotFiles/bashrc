@@ -25,19 +25,19 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 export TO_OR=32
 ################################################################################
-
+##Set Screen as primary, for Tray Icons#########################################
+xrandr --output HDMI-1  --primary
+################################################################################
 
 ##ALIAS'S#######################################################################
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias conky='conkyscript && lxterminal && exit'
 alias git-pl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-##Set Commandline Prefix#######################################################
+##Set Commandline Prefix########################################################
 PS1='[\u@\h \W]\$ '
 
 ##OctOs Build Flags#############################################################
-export CCACHE_DIR=$HOME/.ccache
 export USE_CCACHE=1
 export USE_PREBUILT_CHROMIUM=1
 #set up ccache if not present

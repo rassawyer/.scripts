@@ -1,4 +1,4 @@
 eval SSH_AUTH_SOCK=/tmp/ssh-hm0SN35S5SQg/agent.16106; export SSH_AUTH_SOCK;
 SSH_AGENT_PID=16107; export SSH_AGENT_PID;
-echo Agent pid 16107;
+echo Agent pid $SSH_AGENT_PID;
 ssh-add .ssh/Ryzen_Server_rsa
