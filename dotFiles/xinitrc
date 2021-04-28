@@ -39,6 +39,8 @@ fi
 #xterm -geometry 80x50+494+51 &
 #xterm -geometry 80x20+494-0 &
 ~/.fehbg &
+xrandr --output LVDS-1 --auto --output DP-1-3 --auto --right-of LVDS-1
 udiskie &
 numlockx &
 exec i3
+

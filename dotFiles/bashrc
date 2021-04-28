@@ -5,7 +5,7 @@
 
 ##OPENING SCREEN GEMS###########################################################
 [[ $- != *i* ]] && return
-a=`echo $(( (RANDOM % 4 ) +1))`
+a=`echo $(( (RANDOM % 5 ) +1))`
 if [ $a = "1" ] ;
 then
 	cmatrix -s
@@ -15,7 +15,10 @@ then
 elif [ $a = "3" ] ;
 then
 	archey3
-else [ $a = "4" ] ;
+elif [ $a = "4" ];
+then
+	sl
+else [ $a = "5" ] ;
 	asciiquarium
 fi
 
@@ -26,7 +29,7 @@ export EDITOR="$VISUAL"
 export TO_OR=32
 ################################################################################
 ##Set Screen as primary, for Tray Icons#########################################
-xrandr --output HDMI-1  --primary
+xrandr --output LVDS-1  --primary
 ################################################################################
 
 ##ALIAS'S#######################################################################
@@ -38,10 +41,11 @@ alias git-pl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cres
 PS1='[\u@\h \W]\$ '
 
 ##OctOs Build Flags#############################################################
-export USE_CCACHE=1
-export USE_PREBUILT_CHROMIUM=1
 #set up ccache if not present
-if [ ! -d "$CCACHE_DIR" ]; then
-    $HOME/.ccache -M 50G
-fi
+## if [ ! -d "$CCACHE_DIR" ]; then
+##      $HOME/.ccache -M 50G
+## fi
+## export USE_CCACHE=1
+## export USE_PREBUILT_CHROMIUM=1
 ################################################################################
+source /usr/share/nvm/init-nvm.sh

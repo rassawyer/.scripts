@@ -1,5 +1,10 @@
+#! /bin/bash
+
 eval "$(ssh-agent -s)"
-ssh-add $HOME/.ssh/id_rsa
-ssh -p 29418 rassawyer@review.pac-rom.com
+## ssh-add $HOME/.ssh/id_rsa
+## ssh -p 29418 rassawyer@review.pac-rom.com
 ssh-add $HOME/.ssh/github
 ssh -T git@github.com
+
+ssh-add $HOME/.ssh/bitbucket
+

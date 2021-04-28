@@ -47,6 +47,12 @@ ln -sf $HOME/.scripts/dotFiles/i3 $HOME/.config/i3/config
 ###############################################################################
 
 ###############################################################################
+## setup Android build utilities and directories
+curl https://storage.googleapis.com/git-repo-downloads/repo > $HOME/.scripts/repo
+chmod a+x $HOME/.scripts/repo
+###############################################################################
+
+###############################################################################
 ## remove existing i3blocks config file, if present, and replace with softlink 
 ## to custom version.
 ## remove $HOME/.xinitrc and replace with softlink to custom version
