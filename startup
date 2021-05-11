@@ -1,0 +1,7 @@
+#! /bin/bash
+firefox &
+code-oss &
+postman &
+pcmanfm &
+signal-desktop &
+slack &
