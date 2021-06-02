@@ -206,34 +206,51 @@ bindsym Mod1+i exec inkscape
 
 
 ###############################################################################
+# Set correct display positions
+output eDP-1 pos 0 0
+output DP-1 pos 1920 0
+output HDMI-A-1 pos 0 1080
+output HDMI-A-1 transform 90
+
 # Custom Application/Workspace bindings
 # Workspace to monitor bindings
-workspace 1 output primary
-workspace 2 output primary
-workspace 3 output primary
+workspace 1 output eDP-1
+workspace 2 output eDP-1
+workspace 3 output eDP-1
 
-workspace 4 output HDMI-1-1
-#workspace 4 output DP-1-1
-#workspace 5 output DP-1-1
-#workspace 6 output DP-1-1
+workspace 4 output DP-1
+workspace 5 output DP-1
+workspace 6 output DP-1
 
 workspace 10 output HDMI-1
 #Assign Firefox to workspace #1
-assign [class="firefox"] 1
+assign [class="firefox"] → 1
 
 #Assign Postman to WS# 2
-assign [class="Postman"] 2
+assign [class="Postman"] → 2
 
 #Assign File Manager to WS #3
-assign [class="Pcmanfm"] 3
+assign [class="Pcmanfm"] → 3
 
 #Assign VS Code to WS #4
-assign [class="code-oss"] 4
+assign [app_id="code-oss"] → 4
 
 #Assign Signal to WS #6
-assign [class="Slack"] 6
+assign [class="Slack"] → 6
 #Assign Slack to WS #6
-assign [class="Signal"] 6
+assign [class="Signal"] → 6
+
+
+###############################################################################
+#Launch default programs
+#
+exec ssh-add ~/.ssh/bitbucket
+exec startup
+exec accountable2you
+
+#Set desktop Background on login
+#
+exec setwall random -c sway /home/rassawyer/.wallpaper/
 ###############################################################################
 
 

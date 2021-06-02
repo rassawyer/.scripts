@@ -29,13 +29,16 @@ export EDITOR="$VISUAL"
 export TO_OR=32
 ################################################################################
 ##Set Screen as primary, for Tray Icons#########################################
-xrandr --output LVDS-1  --primary
+# xrandr --output LVDS-1  --primary
 ################################################################################
 
 ##ALIAS'S#######################################################################
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias git-pl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias nrsd='npm run start:dev'
+alias code="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias code-oss="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
 
 ##Set Commandline Prefix########################################################
 PS1='[\u@\h \W]\$ '

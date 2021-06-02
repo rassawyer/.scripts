@@ -1,6 +1,6 @@
 #! /bin/bash
 firefox &
-code-oss &
+code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland &
 postman &
 pcmanfm &
 signal-desktop &
