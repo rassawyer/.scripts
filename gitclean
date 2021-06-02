@@ -1,11 +1,13 @@
 #! /bin/bash
 
+REMOTE=$(git remote)
+
 if [[ "$*" == "-s" ]]; then
 	git fetch --prune | sed 's/ - \[deleted\]\ \ \ \ \ \ \ \ \ (none)\ \ \ \ \ ->\ //g' | xargs git branch -d
 
 elif [[ "$*" == "-d" ]]; then
-	git branch -vv | grep -v origin | sed -e 's/\ \ //' -e 's/\*\ //' -e 's/\ .*$//' | xargs git branch -d
+	git branch -vv | grep -v $REMOTE | sed -e 's/\ \ //' -e 's/\*\ //' -e 's/\ .*$//' | xargs git branch -d
 
 elif [[ "$*" == "" ]]; then
-	echo "gitclean -s removes merged branches; gitlean -d removes all brnches that do not have a remote."
+	echo "gitclean -s removes merged branches; gitlean -d removes all branches that do not have a remote."
 fi
