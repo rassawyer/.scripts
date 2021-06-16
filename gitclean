@@ -3,7 +3,7 @@
 REMOTE=$(git remote)
 
 if [[ "$*" == "-s" ]]; then
-	git fetch --prune | sed 's/ - \[deleted\]\ \ \ \ \ \ \ \ \ (none)\ \ \ \ \ ->\ origin\///g' | xargs git branch -d
+	git fetch --prune >ear sed 's/ - \[deleted\]\ \ \ \ \ \ \ \ \ (none)\ \ \ \ \ ->\ origin\///g' | xargs git branch -d
 
 elif [[ "$*" == "-d" ]]; then
 	git branch -vv | grep -v $REMOTE | sed -e 's/\ \ //' -e 's/\*\ //' -e 's/\ .*$//' | xargs git branch -d
