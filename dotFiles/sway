@@ -226,6 +226,7 @@ workspace 3 output eDP-1
 workspace 4 output DP-2
 workspace 5 output DP-2
 workspace 6 output DP-2
+workspace 7 output DP-2
 
 workspace 10 output HDMI-1
 #Assign Firefox to workspace #1
@@ -241,9 +242,9 @@ assign [class="Pcmanfm"] → 3
 assign [app_id="code-oss"] → 4
 
 #Assign Signal to WS #6
-assign [class="Slack"] → 6
+assign [class="Slack"] → 7
 #Assign Slack to WS #6
-assign [class="Signal"] → 6
+assign [class="Signal"] → 7
 
 
 ###############################################################################
@@ -256,6 +257,7 @@ exec accountable2you
 #Set desktop Background on login
 #
 exec setwall random -c sway /home/rassawyer/.wallpaper/
+exec dunst
 ###############################################################################
 
 
