@@ -47,7 +47,6 @@ fi
 udiskie &
 numlockx &
 startup &
-accountable2you &
-exec i3
+## exec i3
 
 #exec sway

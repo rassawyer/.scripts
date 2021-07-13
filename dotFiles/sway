@@ -28,10 +28,10 @@ font pango:monospace 8
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $up l
-set $down k
-set $left j
-set $right semicolon
+set $up k
+set $down j
+set $left h
+set $right l
 
 # use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod1
@@ -74,7 +74,7 @@ bindsym Mod1+Shift+Up move up
 bindsym Mod1+Shift+Right move right
 
 # split in horizontal orientation
-bindsym Mod1+h split h
+bindsym Mod1+b split h
 
 # split in vertical orientation
 bindsym Mod1+v split v
@@ -135,7 +135,7 @@ bindsym Mod1+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym Mod1+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym Mod1+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym Mod1+Shift+e exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit Sway? This will end your Wayland session.' -b 'Yes, exit Sway' 'swaymsg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -202,13 +202,19 @@ bindsym --release XF86MonBrightnessDown exec light -U 1
 
 # Custom keybinding [Misc.] (Search parameters: eject, programs, terminal)
 bindsym --release XF86Eject exec eject
-bindsym Mod1+t exec lxterminal
+bindsym Mod1+t exec alacritty
 bindsym Mod1+m exec music
 bindsym Mod1+p exec vlc
-bindsym Mod1+b exec qutebrowser 
 bindsym Mod1+g exec gimp
 bindsym Mod1+i exec inkscape
 ################################################################################
+
+
+################################################################################
+# Set Numlock on at start
+input 1:1:AT_Translated_Set_2_keyboard xkb_numlock enabled
+################################################################################
+
 
 ################################################################################
 # Set correct display positions
@@ -253,6 +259,7 @@ assign [class="Signal"] → 7
 exec ssh-add ~/.ssh/bitbucket
 exec startup
 exec accountable2you
+exec sway_background
 
 #Set desktop Background on login
 #
