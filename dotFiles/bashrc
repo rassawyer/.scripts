@@ -51,5 +51,7 @@ PS1='[\u@\h \W]\$ '
 ## export USE_CCACHE=1
 ## export USE_PREBUILT_CHROMIUM=1
 ################################################################################
+dbus-update-activation-environment --systemd DISPLAY
+gnome-keyring-daemon --start
 source /usr/share/nvm/init-nvm.sh
 source /usr/share/doc/pkgfile/command-not-found.bash

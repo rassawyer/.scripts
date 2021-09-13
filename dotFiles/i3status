@@ -13,6 +13,7 @@ general {
 }
 
 order += "volume master"
+order += "volume internal"
 order += "cpu_temperature 0"
 order += "ipv6"
 order += "wireless _first_"
@@ -24,13 +25,19 @@ order += "memory"
 order += "tztime local"
 
 volume master {
-				format = "Vol: %volume"
+				format = "Vol1: %volume"
 				format_muted = "Vol: muted (%volume)"
-				device = "pulse:1"
+				device = "pulse:alsa_output.pci-0000_00_1f.3.analog-stereo"
+}
+
+volume internal {
+        format = "Vol2: %volume"
+                format_muted = "Vol: muted (%volume)"
+                device = "pulse:alsa_output.usb-Generic_USB_Audio_200901010001-00.HiFi__hw_Dock__sink"
 }
 
 cpu_temperature 0 {
-				format = "T: %degrees °C"
+				format = "CPU-T: %degrees °C"
 				}
 
 wireless _first_ {

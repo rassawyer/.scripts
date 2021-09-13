@@ -1,0 +1,10 @@
+## Global Configuration:
+User rassawyer
+
+## Host Specific Confiuratio:
+
+## Android Monster Configuraton:
+Host Android_Monster
+	Hostname 10.1.0.10
+	Port		39876
+## End
