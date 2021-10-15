@@ -221,7 +221,6 @@ exec lockscreen
 #PulseAudio controls
 bindsym --release XF86AudioRaiseVolume exec volumectl +
 bindsym --release XF86AudioLowerVolume exec volumectl -
-
 bindsym --release XF86AudioMute exec volumectl m
 
 #bindsym Mod1+0xffc6 exec amixer sset Master 100%-
@@ -236,8 +235,10 @@ bindsym --release XF86AudioPrev exec playerctl previous
 bindsym --release XF86AudioPlay exec playerctl play-pause
 
 # Custom keybindings [Backlight] (Search parameters: brightness)
-bindsym --release XF86MonBrightnessUp exec light -A 1
-bindsym --release XF86MonBrightnessDown exec light -U 1
+bindsym --release XF86MonBrightnessUp exec xbacklight -inc 2
+bindsym --release XF86MonBrightnessDown exec xbacklight -dec 2
+bindsym --release Super_L+F5 exec xbacklight -inc 2
+bindsym --release Super_L+F4 exec xbacklight -dec 2
 
 # Custom keybinding [Misc.] (Search parameters: eject, programs, terminal)
 bindsym --release XF86Eject exec eject
@@ -246,6 +247,11 @@ bindsym Mod1+m exec music
 bindsym Mod1+p exec vlc
 bindsym Mod1+g exec gimp
 bindsym Mod1+i exec inkscape
+# Take a screenshot with all output and save it into screenshots
+bindsym Print exec grim -t jpeg ~/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
+
+# Take a Screenshot with the region select
+bindsym Mod1+Print exec grim -t jpeg -g "$(slurp)" ~/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
 ################################################################################
 
 
@@ -263,6 +269,8 @@ output eDP-1 pos 0 0
 output DP-2 pos 1920 0
 output HDMI-A-1 pos 0 1080
 output HDMI-A-1 transform 90
+output HDMI-A-2 pos 0 1080
+output HDMI-A-2 transform 90
 
 # Custom Application/Workspace bindings
 # Workspace to monitor bindings
@@ -275,7 +283,7 @@ workspace 5 output DP-2
 workspace 6 output DP-2
 workspace 7 output DP-2
 
-workspace 10 output HDMI-1
+workspace 10 output HDMI-A-2
 #Assign Firefox to workspace #1
 assign [class="firefox"] → 1
 
@@ -290,9 +298,9 @@ assign [app_id="code-oss"] → 4
 
 #Assign Signal to WS #6
 assign [class="Slack"] → 7
+
 #Assign Slack to WS #6
 assign [class="Signal"] → 7
-
 
 ###############################################################################
 #Launch default programs

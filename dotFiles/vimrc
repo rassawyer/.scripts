@@ -17,6 +17,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " Plugin Section
 call vundle#begin()
 
+Plugin 'junegunn/fzf.vim'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'itchyny/landscape.vim'
 Plugin 'othree/html5.vim'

@@ -1,0 +1,28 @@
+#! /bin/sh
+
+tmux new -s RRE -d 
+
+	tmux rename-window -t RRE Servers
+ 	tmux send-keys -t RRE 'cd ~/Code/RandR/rre-client && nrsd' C-m 
+
+	tmux split-window -h 
+	tmux send-keys 'cd ~/Code/RandR/rre-server && nrsd' C-m 
+
+	tmux new-window -n  Vim 	
+	tmux send-keys 'cd ~/Code/RandR/ && nnn' C-m 
+
+	tmux split-window -h
+	tmux send-keys 'cd ~/Code/RandR/ && nnn' C-m 
+
+	tmux new-window -n Git
+	tmux send-keys 'cd ~/Code/RandR/rre-client' C-m
+
+	tmux split-window -h
+	tmux send-keys 'cd ~/Code/RandR/rre-server' C-m
+
+	tmux new-window -n Bash
+
+	tmux new-window -n IRC
+	tmux send-keys 'irssi' C-m
+
+tmux attach -t RRE

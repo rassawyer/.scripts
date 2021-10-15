@@ -7,4 +7,10 @@ User rassawyer
 Host Android_Monster
 	Hostname 10.1.0.10
 	Port		39876
+###############################
+
+## Bitbucket Configuration
+Host bitbucket.org
+   HostKeyAlgorithms +ssh-rsa
+   PubkeyAcceptedKeyTypes +ssh-rsa
 ## End

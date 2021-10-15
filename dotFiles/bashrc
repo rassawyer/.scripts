@@ -3,25 +3,28 @@
 #
 # If not running interactively, don't do anything
 
-##OPENING SCREEN GEMS###########################################################
-[[ $- != *i* ]] && return
-a=`echo $(( (RANDOM % 5 ) +1))`
-if [ $a = "1" ] ;
-then
-	cmatrix -s
-elif [ $a = "2" ] ;
-then
-	fortune | cowsay
-elif [ $a = "3" ] ;
-then
-	archey3
-elif [ $a = "4" ];
-then
-	sl
-else [ $a = "5" ] ;
-	asciiquarium
-fi
+## OPENING SCREEN GEMS #########################################################
+## Only if not in Tmux #########################################################
+if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+	[[ $- != *i* ]] && return
+	a=`echo $(( (RANDOM % 5 ) +1))`
 
+	if [ $a = "1" ] ;	then
+		cmatrix -s
+
+	elif [ $a = "2" ] ;	then
+		fortune | cowsay
+
+	elif [ $a = "3" ] ;	then
+		archey3
+
+	elif [ $a = "4" ];	then
+		sl
+
+	else 
+		asciiquarium
+	fi
+fi
 ##EXPORTS#######################################################################
 export PATH="/usr/lib/ccache/bin/:$HOME/.scripts/:$HOME/.scripts/i3scripts/:$PATH"
 export VISUAL=vim
@@ -32,13 +35,21 @@ export TO_OR=32
 # xrandr --output LVDS-1  --primary
 ################################################################################
 
+## NNN Settings ################################################################
+export NNN_BMS='d:~/Documents;D:~/Downloads/;R:~/Code/RandR/'
+export NNN_SSHFS="sshfs -o follow_symlinks"        # make sshfs follow symlinks on the remote
+export NNN_COLORS="2136"                           # use a different color for each context
+################################################################################
+
 ##ALIAS'S#######################################################################
+alias pingg='ping -c 5 google.com'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias git-pl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias nrsd='npm run start:dev'
 alias code="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
 alias code-oss="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias hibernate="systemctl hibernate && swaylock -f -i /home/rassawyer/.wallpaper/LockScreen/$(ls /home/rassawyer/.wallpaper/LockScreen | shuf -n 1)"
 
 ##Set Commandline Prefix########################################################
 PS1='[\u@\h \W]\$ '
