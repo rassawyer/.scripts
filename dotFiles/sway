@@ -258,6 +258,9 @@ bindsym Mod1+Print exec grim -t jpeg -g "$(slurp)" ~/screenshots/$(date +%Y-%m-%
 ################################################################################
 # Set Numlock on at start
 input 1:1:AT_Translated_Set_2_keyboard xkb_numlock enabled
+input type:touchpad {
+        tap enabled
+}
 ################################################################################
 
 
