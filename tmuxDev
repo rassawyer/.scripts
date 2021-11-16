@@ -1,45 +1,45 @@
 #! /bin/sh
 
-if [[ "$(tmux ls | grep -c RRE)" != 1 ]]; then
+if [[ "$(tmux ls | grep -c Chazak)" != 1 ]]; then
 
-## Create Tmux Server
-tmux new -s RRE -d 
+	## Create Tmux Server
+	tmux new -s Chazak -d
 
-## Window #1
-	tmux rename-window -t RRE Servers
- 	tmux send-keys -t RRE 'cd ~/Code/RandR/rre-client' C-m 
-	tmux send-keys -t RRE 'nrsd' C-m
+	## Window #1
+		tmux rename-window -t Chazak
+		tmux send-keys -t Chazak_F 'cd ~/Code/RandR/rre-client' C-m
+		tmux send-keys 'npx nx serve pulse-web' C-m
 
-	tmux split-window -h 
-	tmux send-keys 'cd ~/Code/RandR/rre-server' C-m 
-	tmux send-keys 'nrsd' C-m
+		tmux split-window -h
+		tmux send-keys 'cd ~/Code/Chazak/chazak/' C-m
+		tmux send-keys 'nx run api:serve' C-m
 
-## Window #2
-	tmux new-window -n  Vim 	
-	tmux send-keys 'cd ~/Code/RandR/' C-m 
-	tmux send-keys 'nnn' C-m
+	## Window #2
+		tmux new-window -n  nnn
+		tmux send-keys 'cd ~/Code/Chazak/chazak/' C-m
+		tmux send-keys 'nnn' C-m
 
-	tmux split-window -h
-	tmux send-keys 'cd ~/Code/RandR/' C-m 
-	tmux send-keys 'nnn' C-m
+		tmux split-window -h
+		tmux send-keys 'cd ~/Code/Chazak/chazak/' C-m
+		tmux send-keys 'nnn' C-m
 
-## Window #3
-	tmux new-window -n Git
-	tmux send-keys 'cd ~/Code/RandR/rre-client' C-m
+	## Window #3
+		tmux new-window -n Git
+		tmux send-keys 'cd ~/Code/Chazak/chazak/' C-m
 
-	tmux split-window -h
-	tmux send-keys 'cd ~/Code/RandR/rre-server' C-m
+		tmux split-window -h
+		tmux send-keys 'cd ~/Code/Chazak/chazak/' C-m
 
-## Window #4 
-	tmux new-window -n Local_Bash
-	tmux split-window -h
-	tmux send-keys 'ssh Android-Monster' C-m
+	## Window #4 
+		tmux new-window -n Local_Bash
+		tmux split-window -h
+		tmux send-keys 'ssh Android-Monster' C-m
 
-## Window #5
-	tmux new-window -n IRC
-	tmux send-keys 'irssi' C-m
+	## Window #5
+		tmux new-window -n IRC
+		tmux send-keys 'irssi' C-m
 fi
 
 ## Attach to Server
-tmux attach -t RRE 
+tmux attach -t Chazak
 	
