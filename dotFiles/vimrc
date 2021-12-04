@@ -32,9 +32,6 @@ set softtabstop=3
 " shortcut to install plugins
 nnoremap <silent><leader>1 :source ~/.vimrc \| :PluginInstall<CR>
 
-" Set theme to Landscape
-colorscheme landscape
-
 autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
 
 " Get the defaults that most users want.
