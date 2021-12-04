@@ -7,7 +7,7 @@ if [[ "$(tmux ls | grep -c Chazak)" != 1 ]]; then
 
 	## Window #1
 		tmux rename-window -t Chazak
-		tmux send-keys -t Chazak_F 'cd ~/Code/Chazak/chazak/' C-m
+		tmux send-keys 'cd ~/Code/Chazak/chazak/' C-m
 		tmux send-keys 'npx nx serve pulse-web' C-m
 
 		tmux split-window -h
@@ -42,4 +42,4 @@ fi
 
 ## Attach to Server
 tmux attach -t Chazak
-	
+

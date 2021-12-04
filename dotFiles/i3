@@ -196,7 +196,7 @@ bindsym --release XF86MonBrightnessDown exec light -U 1
 
 # Custom keybinding [Misc.] (Search parameters: eject, programs, terminal)
 bindsym --release XF86Eject exec eject
-bindsym Mod1+t exec lxterminal
+bindsym Mod1+t exec alacritty
 bindsym Mod1+m exec music
 bindsym Mod1+p exec vlc
 bindsym Mod1+b exec qutebrowser 

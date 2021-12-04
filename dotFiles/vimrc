@@ -8,29 +8,6 @@ inoremap <Esc>B <down>
 inoremap <Esc>C <right>
 inoremap <Esc>D <left>
 
-
-" Vundle related settings
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-
-" Plugin Section
-call vundle#begin()
-
-Plugin 'junegunn/fzf.vim'
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'itchyny/landscape.vim'
-Plugin 'othree/html5.vim'
-Plugin 'townk/vim-autoclose'
-Plugin 'alvan/vim-closetag'
-Plugin 'preservim/nerdtree'
-Plugin 'HerringtonDarkholme/yats.vim'
-Plugin 'maxmellon/vim-jsx-pretty'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-
-
-call vundle#end()
-
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 set wildmenu
