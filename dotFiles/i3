@@ -175,9 +175,9 @@ bar {
 
 ###############################################################################
 # Custom keybindings [Audio] (Search parameters: volume, audio, mute, unmute)
-bindsym --release XF86AudioRaiseVolume exec amixer sset Master 1%+
-bindsym --release XF86AudioLowerVolume exec amixer sset Master 1%-
-bindsym --release XF86AudioMute exec amixer set IEC958 toggle
+bindsym --release XF86AudioRaiseVolume exec volumectl +
+bindsym --release XF86AudioLowerVolume exec volumectl -
+bindsym --release XF86AudioMute exec volumectl m
 
 #bindsym Mod1+0xffc6 exec amixer sset Master 100%-
 #bindsym Mod1+0xffc7 exec amixer sset Master 5%-

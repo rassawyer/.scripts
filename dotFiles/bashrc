@@ -30,6 +30,7 @@ export PATH="/usr/lib/ccache/bin/:$HOME/.scripts/:$HOME/.scripts/i3scripts/:$PAT
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export TO_OR=32
+export BW_CLIENTSECRET="bGofUv4FIjNFLAjD1agbEaAB78XiW0"
 ################################################################################
 ##Set Screen as primary, for Tray Icons#########################################
 # xrandr --output LVDS-1  --primary
