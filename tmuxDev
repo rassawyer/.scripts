@@ -33,4 +33,4 @@ fi
 
 ## Attach to Server
 tmux attach -t Chazak
-	
+
