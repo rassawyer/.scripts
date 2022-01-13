@@ -318,6 +318,9 @@ exec accountable2you
 exec sway_background
 # Notification Deamon
 exec dunst
+# Tmux Scripts
+exec tmuxDev
+exec tmuxServers
 ###############################################################################
 
 

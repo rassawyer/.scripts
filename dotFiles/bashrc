@@ -42,6 +42,7 @@ export NNN_COLORS="2136"                           # use a different color for e
 ################################################################################
 
 ##ALIAS'S#######################################################################
+alias qcad='qcad -platform xcb'
 alias pingg='ping -c 5 google.com'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
