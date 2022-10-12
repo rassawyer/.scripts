@@ -7,11 +7,11 @@ if [[ "$(tmux ls | grep -c Servers)" != 1 ]]; then
 
 	## Window #1
 		tmux rename-window -t Servers
-		tmux send-keys 'cd ~/Code/Servers/chazak/' C-m
+		tmux send-keys 'cd ~/Code/Chazak/chazak/' C-m
 		tmux send-keys 'npx nx serve pulse-web' C-m
 
 		tmux split-window -h
-		tmux send-keys 'cd ~/Code/Servers/chazak/' C-m
+		tmux send-keys 'cd ~/Code/Chazak/chazak/' C-m
 		tmux send-keys 'nx run api:serve' C-m
 
 fi

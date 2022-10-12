@@ -33,7 +33,7 @@ if [[ "$(tmux ls | grep -c Chazak)" != 1 ]]; then
 	## Window #4 
 		tmux new-window -n Local_Bash
 		tmux split-window -h
-		tmux send-keys 'ssh Android-Monster' C-m
+		tmux send-keys 'ssh Android_Monster' C-m
 
 	## Window #5
 		tmux new-window -n IRC

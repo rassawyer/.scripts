@@ -7,7 +7,7 @@
 ## Only if not in Tmux #########################################################
 if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
 	[[ $- != *i* ]] && return
-	a=`echo $(( (RANDOM % 5 ) +1))`
+	a=`echo $(( (RANDOM % 4 ) +1))`
 
 	if [ $a = "1" ] ;	then
 		cmatrix -s
@@ -18,9 +18,9 @@ if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
 	elif [ $a = "3" ] ;	then
 		archey3
 
-	elif [ $a = "4" ];	then
-		sl
-
+#	elif [ $a = "4" ];	then
+#		sl
+#
 	else 
 		asciiquarium
 	fi
@@ -42,6 +42,9 @@ export NNN_COLORS="2136"                           # use a different color for e
 ################################################################################
 
 ##ALIAS'S#######################################################################
+## my tmuxDev script seems to cause issues if sway closes or crashes, so this
+## will make the system logout anytime sway closes, as a workaround.
+alias sway='sway && logout'
 alias qcad='qcad -platform xcb'
 alias pingg='ping -c 5 google.com'
 alias ls='ls --color=auto'
@@ -64,6 +67,6 @@ PS1='[\u@\h \W]\$ '
 ## export USE_PREBUILT_CHROMIUM=1
 ################################################################################
 dbus-update-activation-environment --systemd DISPLAY
-gnome-keyring-daemon --start
+gnome-keyring-daemon --start >> /dev/null
 source /usr/share/nvm/init-nvm.sh
 source /usr/share/doc/pkgfile/command-not-found.bash

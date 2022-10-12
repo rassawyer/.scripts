@@ -1,8 +1,20 @@
 #
 # ~/.bash_profile
 #
+## Start keyring, and add ssh keys to it. 
+
+gnome-keyring-daemon --start >> /dev/null
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 ssh-add $HOME/.ssh/bitbucket
 ssh-add $HOME/.ssh/github
+
+## Set $DISPLAY, since Wayland does not use Xorg style Display variable.
+dbus-update-activation-environment --systemd DISPLAY
+
+## Start NVM and Bash Auto-Complete.
+source /usr/share/nvm/init-nvm.sh
+source /usr/share/doc/pkgfile/command-not-found.bash
+
+## Run .bashrc for this session.
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 

@@ -1,6 +1,6 @@
 #! /bin/bash
 firefox &
-code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland &
+# code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland &
 ## consider uncommenting this line when working on backend/api design.
 # postman &
 
@@ -8,3 +8,4 @@ code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland &
 # pcmanfm &
 signal-desktop &
 slack &
+accountable2you &
