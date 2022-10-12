@@ -7,7 +7,7 @@
 ## Only if not in Tmux #########################################################
 if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
 	[[ $- != *i* ]] && return
-	a=`echo $(( (RANDOM % 5 ) +1))`
+	a=`echo $(( (RANDOM % 4 ) +1))`
 
 	if [ $a = "1" ] ;	then
 		cmatrix -s
@@ -18,9 +18,9 @@ if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
 	elif [ $a = "3" ] ;	then
 		archey3
 
-	elif [ $a = "4" ];	then
-		sl
-
+#	elif [ $a = "4" ];	then
+#		sl
+#
 	else 
 		asciiquarium
 	fi
