@@ -22,6 +22,7 @@ arp-scan
 artyfx
 asciiquarium
 atftp
+audacity
 audio-convert
 autoconf
 automake
@@ -62,7 +63,6 @@ cppcheck
 cpupower
 cronie
 darkstat
-dbeaver
 ddrescue
 deteriorate-lv2
 dgedit
@@ -254,7 +254,6 @@ sherlock.lv2
 siege
 signal-desktop
 sl
-smali
 socat
 solfege
 sorcer
@@ -263,6 +262,7 @@ soundconverter
 spectmorph
 speedtest-cli
 splint
+squashfuse
 ssh-audit
 sshuttle
 sslh
@@ -311,6 +311,7 @@ vim-syntastic
 vim-tagbar
 vm.lv2
 vmpk
+vorbisgain
 vulkan-tools
 vulscan
 wah-plugins
@@ -357,7 +358,6 @@ xorg-xwininfo
 xorg-xwud
 yass
 zam-plugins
-zaproxy
 zita-ajbridge
 zita-at1
 zita-bls1
