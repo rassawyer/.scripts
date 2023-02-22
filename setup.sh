@@ -23,8 +23,8 @@ ln -sf $HOME/.scripts/dotFiles/bashrc $HOME/.bashrc
 if [ ! -d $HOME/.config ]; then
 	mkdir $HOME/.config
 fi
-if [ ! -d $HOME/.config/i3 ]; then
-	mkdir $HOME/.config/i3
+if [ ! -d $HOME/.config/sway ]; then
+	mkdir $HOME/.config/sway
 fi
 
 if [ ! -d $HOME/.scripts ]; then
@@ -37,13 +37,13 @@ fi
 ###############################################################################
 
 ###############################################################################
-## remove existing i3 config file, and replace with a softlink to custom 
+## remove existing sway config file, and replace with a softlink to custom 
 ## version
-if [ ! -f $HOME/.config/i3/config ]; then
-	rm -rfv $HOME/.config/i3/config
+if [ ! -f $HOME/.config/sway/config ]; then
+	rm -rfv $HOME/.config/sway/config
 fi
-rm -rfv $HOME/.config/i3/config
-ln -sf $HOME/.scripts/dotFiles/i3 $HOME/.config/i3/config
+rm -rfv $HOME/.config/sway/config
+ln -sf $HOME/.scripts/dotFiles/sway $HOME/.config/sway/config
 ###############################################################################
 
 ###############################################################################
@@ -53,7 +53,7 @@ chmod a+x $HOME/.scripts/repo
 ###############################################################################
 
 ###############################################################################
-## remove existing i3blocks config file, if present, and replace with softlink 
+## remove existing swayblocks config file, if present, and replace with softlink 
 ## to custom version.
 ## remove $HOME/.xinitrc and replace with softlink to custom version
 if [ ! -f $HOME/.xinitrc ]; then
