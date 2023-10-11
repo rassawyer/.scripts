@@ -7,12 +7,15 @@ if [[ "$(tmux ls | grep -c Chazak)" != 1 ]]; then
 
 	## Window #1
 		tmux rename-window -t Home
-		## tmux send-keys 'cd ~/Code/Chazak/chazak/' C-m
-		## tmux send-keys 'npx nx serve pulse-web' C-m
+		tmux send-keys 'cd ~/Code/Integro/ClickUp/integro' C-m
+		tmux send-keys '. github' C-m
+		tmux send-keys 'pnpm web'
 
 		tmux split-window -h
-		## tmux send-keys 'cd ~/Code/Chazak/chazak/' C-m
-		## tmux send-keys 'nx run api:serve' C-m
+		tmux send-keys 'cd ~/Code/Integro/ClickUp/integro' C-m
+		tmux send-keys '. github' C-m
+		tmux send-keys 'pnpm api' 
+
 
 	## Window #2
 		tmux new-window -n  nnn

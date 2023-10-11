@@ -8,4 +8,4 @@
 # Configuration
 # CONFIG_OUTPUT="/home/rassawyer/Media/Plex" # if this script is called by the deluge user, then $HOME will NOT refer to YOUR user home, but paths such as /var/lib/deluge instead
 
-filebot -script fn:amc --output "$HOME/Media/Plex" --action duplicate --format {plex} --conflict auto -non-strict "$HOME/Media/New" --log-file amc.log --def subtitles=en clean=y unsorted=y music=y artwork=y 
+filebot -script fn:amc --output "$HOME/Media/Plex" --action duplicate --format {plex} --conflict auto -non-strict "/home/qbtuser/Downloads" --log-file amc.log --def subtitles=en clean=y unsorted=y music=y artwork=y excludeList=amc.txt

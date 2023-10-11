@@ -1,4 +1,6 @@
-find Media/ -type d -exec sudo chmod 755 {} \;
+#!/bin/bash
+#
+find /home/rassawyer/Media/ -type d -print -exec sudo chmod 777 {} \;
 
-find Media/ -type f -exec sudo chmod 644 {} \;
+find /home/rassawyer/Media/ -type f  -print -exec sudo chmod 666 {} \;
 

@@ -8,3 +8,4 @@ ssh -T git@github.com
 
 ssh-add $HOME/.ssh/bitbucket
 
+source /usr/share/nvm/init-nvm.sh

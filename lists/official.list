@@ -63,6 +63,7 @@ nvidia
 openresolv
 openshadinglanguage
 p7zip
+pacman-contrib
 python-pyaes
 qpwgraph
 rsync
@@ -76,7 +77,6 @@ traceroute
 ttf-fira-code
 unrar
 vi
-vim
 virtualbox
 vlc
 webrtc-audio-processing
