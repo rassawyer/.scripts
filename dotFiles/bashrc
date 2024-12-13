@@ -30,6 +30,7 @@ export PATH="/usr/lib/ccache/bin/:$HOME/.scripts/:$HOME/.scripts/i3scripts/:$PAT
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export TO_OR=32
+export ELECTRON_OZONE_PLATFORM_HINT=wayland
 ################################################################################
 ##Set Screen as primary, for Tray Icons#########################################
 # xrandr --output LVDS-1  --primary
@@ -51,9 +52,9 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias git-pl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias nrsd='npm run start:dev'
-alias code="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
-alias code-oss="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
-alias hibernate="systemctl hibernate && swaylock -f -i /home/rassawyer/.wallpaper/LockScreen/$(ls /home/rassawyer/.wallpaper/LockScreen | shuf -n 1)"
+# alias code="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
+# alias code-oss="code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias hibernate="systemctl hibernate && swaylock -f -i $HOME/.wallpaper/$(ls $HOME/.wallpaper/ | shuf -n 1)"
 
 ##Set Commandline Prefix########################################################
 PS1='[\u@\h \W]\$ '
@@ -67,6 +68,9 @@ PS1='[\u@\h \W]\$ '
 ## export USE_PREBUILT_CHROMIUM=1
 ################################################################################
 dbus-update-activation-environment --systemd DISPLAY
-gnome-keyring-daemon --start >> /dev/null
-source /usr/share/nvm/init-nvm.sh
+# gnome-keyring-daemon --start >> /dev/null
+# source /usr/share/nvm/init-nvm.sh
 source /usr/share/doc/pkgfile/command-not-found.bash
+. "/home/rassawyer/.deno/env"
+# Created by `pipx` on 2024-10-02 00:45:33
+export PATH="$PATH:/home/rassawyer/.local/bin"

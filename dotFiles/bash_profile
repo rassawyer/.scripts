@@ -3,7 +3,8 @@
 #
 ## Start keyring, and add ssh keys to it. 
 
-gnome-keyring-daemon --start >> /dev/null
+alias hibernate="systemctl hibernate && swaylock -f -i $HOME/.wallpaper/$(ls $HOME/.wallpaper/ | shuf -n 1)"
+# gnome-keyring-daemon --start >> /dev/null
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 ssh-add $HOME/.ssh/bitbucket
 ssh-add $HOME/.ssh/github
@@ -12,9 +13,13 @@ ssh-add $HOME/.ssh/github
 dbus-update-activation-environment --systemd DISPLAY
 
 ## Start NVM and Bash Auto-Complete.
-source /usr/share/nvm/init-nvm.sh
-source /usr/share/doc/pkgfile/command-not-found.bash
+# source /usr/share/nvm/init-nvm.sh
+# source /usr/share/doc/pkgfile/command-not-found.bash
+udiskie &
 
 ## Run .bashrc for this session.
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+
+# Created by `pipx` on 2024-10-02 00:45:33
+export PATH="$PATH:/home/rassawyer/.local/bin"
