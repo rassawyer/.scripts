@@ -5,7 +5,7 @@ export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
 export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
 
 # Set zsh to look inside .config for it's confirguration files.
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh/"
 
 # Set up zsh history.
 export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
