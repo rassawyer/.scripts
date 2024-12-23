@@ -33,7 +33,7 @@ source $HOME/.config/zsh/completion.zsh
 
 ## OPENING SCREEN GEMS #########################################################
 ## Only if not in Tmux #########################################################
-if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+if ! { [ "$TERM" = "tmux-256color" ] && [ -n "$TMUX" ]; } then
 	[[ $- != *i* ]] && return
 	a=`echo $(( (RANDOM % 4 ) +1))`
 
