@@ -1,5 +1,5 @@
 #! /bin/bash
-firefox &
+floorp &
 # code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland &
 ## consider uncommenting this line when working on backend/api design.
 # postman &
