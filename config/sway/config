@@ -249,7 +249,7 @@ assign [app_id="postman"] → 2
 assign [app_id="pcmanfm"] → 3
 
 #Assign Firefox to workspace #4
-assign [app_id="firefox"] → 4
+assign [app_id="floorp"] → 4
 
 #Assign VS Code to WS #6
 assign [app_id="code-oss"] → 6
