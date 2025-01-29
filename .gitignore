@@ -14,6 +14,7 @@ config/htop/
 config/keepassxc/
 config/libfm/
 config/local/
+config/mimeapps.list
 config/obs-studio/
 config/pavucontrol.ini
 config/pcmanfm/
@@ -21,4 +22,4 @@ config/pulse/
 config/rncbc.org/
 config/streamdeck-ui/
 config/vlc/
-
+config/zsh/.zcompdump
