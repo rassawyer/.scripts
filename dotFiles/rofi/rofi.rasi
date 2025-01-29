@@ -1,6 +1,0 @@
-configuration {
-	modi: "window,drun,ssh,combi";
-	font: "fira code 12";
-	combi-modi: "window,drun,ssh";
-}
-@theme "sidebar_v2"

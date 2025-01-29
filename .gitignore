@@ -1,0 +1,24 @@
+config/cache
+config/.X-AIR-Edit/
+config/Code - OSS/
+config/GIMP/
+config/QtProject.conf
+config/Signal/
+config/Slack/
+config/arduino-ide/
+config/audacity/
+config/dconf/
+config/discord/
+config/gtk-2.0/
+config/htop/
+config/keepassxc/
+config/libfm/
+config/local/
+config/obs-studio/
+config/pavucontrol.ini
+config/pcmanfm/
+config/pulse/
+config/rncbc.org/
+config/streamdeck-ui/
+config/vlc/
+
