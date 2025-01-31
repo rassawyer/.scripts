@@ -195,6 +195,9 @@ bindsym --release XF86MonBrightnessDown exec brightnessctl s 5-
 bindsym --release Super_L+F5 exec xbacklight -inc 2
 bindsym --release Super_L+F4 exec xbacklight -dec 2
 
+# Custom keybindings [Sleep] (Search parameters: sleep)
+bindsym --release XF86Sleep exec swaylock -f -i /home/rassawyer/.scripts/dotFiles/res/wallpapers/$(ls /home/rassawyer/.scripts/dotFiles/res/wallpapers/ | shuf -n 1)
+
 # Custom keybinding [Misc.] (Search parameters: eject, programs, terminal)
 bindsym --release XF86Eject exec eject
 bindsym Mod4+t exec alacritty
