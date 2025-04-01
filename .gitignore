@@ -23,3 +23,9 @@ config/rncbc.org/
 config/streamdeck-ui/
 config/vlc/
 config/zsh/.zcompdump
+config/ISL Online
+config/blender/
+config/chromium/
+config/gtk-3.0/
+config/user-dirs.dirs
+config/user-dirs.locale

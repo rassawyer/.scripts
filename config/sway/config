@@ -229,7 +229,7 @@ output * adaptive_sync on
 
 output "Acer Technologies G276HL LW9AA01385A6" pos 0 0
 output "Lenovo Group Limited L28u-35 U1APN095" pos 0 1080
-output "AU Optronics 0x8B9B Unknown" pos 1920 960
+output "Lenovo Group Limited 0x41B7 Unknown" pos 1920 960
 output "Lenovo Group Limited L28u-35 U1APN095" scale 2
 
 # Custom Application/Workspace bindings
