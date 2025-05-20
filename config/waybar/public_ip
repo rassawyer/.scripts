@@ -1,0 +1,17 @@
+#! /bin/zsh
+
+# Public IP
+if command -v curl >/dev/null; then
+	public_ip=$(curl -s --max-time 1 https://ipv4.icanhazip.com)
+else
+	public_ip="N/A"
+fi
+public_ip="${public_ip//[$'\t\r\n ']}"
+
+output+=("{\"text\":\"$public_icon Public: $public_ip\",\"tooltip\":\"Public IP\",\"alt\":\"public\",\"color\":\"#aaaaaa\"}")
+
+# Output Waybar JSON
+echo -n "["
+printf "%s," "${output[@]}" | sed 's/,$//'
+echo "]"
+
