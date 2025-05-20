@@ -29,3 +29,10 @@ config/chromium/
 config/gtk-3.0/
 config/user-dirs.dirs
 config/user-dirs.locale
+config/filezilla/
+config/inkscape
+config/ngrok
+config/onedrive-gui/
+config/onedrive
+config/ticktick
+config/torbrowser
