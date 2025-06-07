@@ -36,3 +36,5 @@ config/onedrive-gui/
 config/onedrive
 config/ticktick
 config/torbrowser
+config/nnn
+config/wireshark
