@@ -38,3 +38,27 @@ config/ticktick
 config/torbrowser
 config/nnn
 config/wireshark
+config/.X32-Edit/
+config/Blackmagic Design/
+config/FreeCAD/
+config/Microsoft/
+config/NuGet/
+config/Projecteur/
+config/PrusaSlicer/
+config/SpeedCrunch/
+config/Thunar/
+config/Unknown Organization/
+config/autostart/teams.desktop
+config/balenaEtcher/
+config/go/
+config/kdeglobals
+config/kdenlive-layoutsrc
+config/kdenliverc
+config/menus/
+config/rclone/
+config/teams/
+config/teamviewer/
+config/tool_state
+config/unity3d/
+config/xfce4/
+
