@@ -190,8 +190,8 @@ bindsym --release XF86AudioPlay exec playerctl play-pause
 bindsym --release XF86NotificationCenter exec swaymsg input type:touchpad events toggle enabled disabled
 
 # Custom keybindings [Backlight] (Search parameters: brightness)
-bindsym --release XF86MonBrightnessUp exec brightnessctl s +5
-bindsym --release XF86MonBrightnessDown exec brightnessctl s 5-
+bindsym --release XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym --release XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --release Super_L+F5 exec xbacklight -inc 2
 bindsym --release Super_L+F4 exec xbacklight -dec 2
 
@@ -251,8 +251,11 @@ assign [app_id="postman"] → 2
 #Assign File Manager to WS #3
 assign [app_id="pcmanfm"] → 3
 
+#Assign File Manager to WS #3
+assign [app_id="thunar"] → 3
+
 #Assign Firefox to workspace #4
-assign [app_id="floorp"] → 4
+assign [app_id="firefox"] → 4
 
 #Assign VS Code to WS #6
 assign [app_id="code-oss"] → 6
