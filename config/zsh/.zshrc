@@ -1,5 +1,5 @@
 # Set the prompt ##############################################################
-export PROMPT="%K{#FF0090}%F{#000000}%B%n%b%f%k@%m %S%~%s %# ➜  "
+PROMPT="%K{#FF0090}%F{#000000}%B%n%b%f%k@%m %S%~%s %# ➜  "
 PS1=$PROMPT
 
 # Autoload zsh add-zsh-hook and vcs_info functions (-U autoload w/o substition, -z use zsh style)
@@ -24,12 +24,11 @@ zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 # PS1="%(?:%{%}%1{➜%} :%{%}%1{➜%} ) %{%}%c%{%} "
 
 ## Bring in my aliases ########################################################
-source $HOME/.scripts/dotFiles/zsh/alias.conf
+source $ZDOTDIR/alias.conf
 
 ## ZSH Options ################################################################
-setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
 _comp_options+=(globdots) # With hidden files
-source $HOME/.config/zsh/completion.zsh
+source $ZDOTDIR/completion.zsh
 
 ## OPENING SCREEN GEMS #########################################################
 ## Only if not in Tmux #########################################################
@@ -55,21 +54,18 @@ if ! { [ "$TERM" = "tmux-256color" ] && [ -n "$TMUX" ]; } then
 	fi
 fi
 ## Add deno completions to search path ########################################
-if [[ ":$FPATH:" != *":/home/rassawyer/.zsh/completions:"* ]]; then export FPATH="/home/rassawyer/.zsh/completions:$FPATH"; fi
+if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then export FPATH="$HOME/.zsh/completions:$FPATH"; fi
 
 # Lines configured by zsh-newuser-install #####################################
-HISTFILE=$ZDOTDIR/zsh/zhistory
-HISTSIZE=10000
-SAVEHIST=10000
 bindkey -v
 # End of lines configured by zsh-newuser-install
+
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/rassawyer/.zshrc'
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-. "/home/rassawyer/.deno/env"
+. "$HOME/.deno/env"
 
 ## Make keys work normally in zsh #############################################
 

@@ -1,6 +1,7 @@
 [general]
 
 [env]
+	TERM = "xterm-256color"
 
 [window]
 
@@ -58,6 +59,8 @@
 [selection]
   
 [cursor]
+	style = "Block"
+	vi_mode_style = "Block"
 
 [terminal]
     
