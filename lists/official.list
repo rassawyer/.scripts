@@ -1,6 +1,7 @@
 alacritty
 amd-ucode
 android-file-transfer
+appmenu-gtk-module
 appstream-glib
 aria2
 aribb24
@@ -23,6 +24,7 @@ cowsay
 discord
 dmd
 dotnet-sdk
+dpkg
 electron34
 electron35
 ent
@@ -61,6 +63,7 @@ libmpeg2
 libngtcp2
 libtar
 libupnp
+lld
 lmms
 lshw
 lutris
@@ -85,6 +88,7 @@ papirus-icon-theme
 patchelf
 pavucontrol
 pkgfile
+pnpm
 prusa-slicer
 pulseaudio-alsa
 python-coverage
@@ -98,7 +102,7 @@ rapidjson
 read-edid
 reflector
 rofi
-rust
+rustup
 scrcpy
 signal-desktop
 sl
@@ -123,6 +127,7 @@ viu
 vlc
 vnstat
 vulkan-headers
+webkit2gtk
 wev
 whois
 wireguard-tools
