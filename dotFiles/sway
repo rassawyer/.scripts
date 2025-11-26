@@ -1,26 +1,9 @@
 #Search parameters are added for use in Vi/Vim, allowing me to quickly jump to specific setting section with related keywords.
 #
-# This config file uses keycodes (bindsym) and was written for the QWERTY
-# layout.
-#
-# To get a config file with the same key positions, but for your current
-# layout, use the i3-config-wizard
-#
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font 'Fira Code':monospace 8
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -39,11 +22,7 @@ bindsym Mod4+Return exec xterm
 bindsym Mod4+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym Mod4+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-#bindsym Mod4+d exec --no-startup-id i3-dmenu-desktop
+bindsym Mod4+d exec bemenu-run
 
 # change focus
 bindsym Mod4+$left focus left
@@ -163,38 +142,10 @@ bindsym Mod4+r mode "resize"
 
 ###############################################################################
 include colorscheme
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 bar {
-        position top
-        status_command i3status
-        tray_output primary
 
-        colors {
-                background $base00
-                separator  $base01
-                statusline $base04
-
-                # State             Border  BG      Text
-                focused_workspace   $base05 $base0D $base00
-                active_workspace    $base05 $base03 $base00
-                inactive_workspace  $base03 $base01 $base05
-                urgent_workspace    $base08 $base08 $base00
-                binding_mode        $base00 $base0A $base00
-                }
+	swaybar_command waybar
 }
-###############################################################################
-
-
-###############################################################################
-# Basic color configuration using the Base16 variables for windows and borders.
-# Property Name         Border  BG      Text    Indicator Child Border
-client.focused          $base05 $base0D $base00 $base0D $base0D
-client.focused_inactive $base01 $base01 $base05 $base03 $base01
-client.unfocused        $base01 $base00 $base05 $base01 $base01
-client.urgent           $base08 $base08 $base00 $base08 $base08
-client.placeholder      $base00 $base00 $base05 $base00 $base00
-client.background       $base07
 ###############################################################################
 
 
@@ -219,10 +170,13 @@ exec lockscreen
 #bindsym --release XF86AudioMute exec amixer set Master toggle
 
 #PulseAudio controls
-bindsym --release XF86AudioRaiseVolume exec volumectl +
-bindsym --release XF86AudioLowerVolume exec volumectl -
-bindsym --release XF86AudioMute exec volumectl m
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
+bindsym Mod4+F3 exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+bindsym Mod4+F2 exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindsym Mod4+F1 exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 #bindsym Mod4+0xffc6 exec amixer sset Master 100%-
 #bindsym Mod4+0xffc7 exec amixer sset Master 5%-
 #bindsym Mod4+0xffc8 exec amixer sset Master 5%+
@@ -235,8 +189,8 @@ bindsym --release XF86AudioPrev exec playerctl previous
 bindsym --release XF86AudioPlay exec playerctl play-pause
 
 # Custom keybindings [Backlight] (Search parameters: brightness)
-bindsym --release XF86MonBrightnessUp exec xbacklight -inc 2
-bindsym --release XF86MonBrightnessDown exec xbacklight -dec 2
+bindsym --release XF86MonBrightnessUp exec brightnessctl s +5
+bindsym --release XF86MonBrightnessDown exec brightnessctl s 5-
 bindsym --release Super_L+F5 exec xbacklight -inc 2
 bindsym --release Super_L+F4 exec xbacklight -dec 2
 
@@ -267,44 +221,48 @@ input type:touchpad {
 ################################################################################
 # Set correct display positions
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+output * adaptive_sync on
 
-output eDP-1 pos 1920 0
-output DP-2 pos 0 0
-output HDMI-A-1 pos 0 1080
-output HDMI-A-1 transform 90
-output HDMI-A-2 pos 0 1080
-output HDMI-A-2 transform 90
-output HDMI-A-2 scale 3
+output "Acer Technologies G276HL LW9AA01385A6" pos 0 0
+output "Lenovo Group Limited L28u-35 U1APN095" pos 0 1080
+output "AU Optronics 0x8B9B Unknown" pos 1920 960
+output "Lenovo Group Limited L28u-35 U1APN095" scale 2
 
 # Custom Application/Workspace bindings
 # Workspace to monitor bindings
-workspace 1 output eDP-1
-workspace 2 output eDP-1
-workspace 3 output eDP-1
+workspace 1 output "Acer Technologies G276HL LW9AA01385A6"
+workspace 2 output "Acer Technologies G276HL LW9AA01385A6"
+workspace 3 output "Acer Technologies G276HL LW9AA01385A6"
 
-workspace 4 output DP-2
-workspace 5 output DP-2
-workspace 6 output DP-2
-workspace 7 output DP-2
+workspace 4 output "Lenovo Group Limited L28u-35 U1APN095"
+workspace 5 output "Lenovo Group Limited L28u-35 U1APN095"
+workspace 6 output "Lenovo Group Limited L28u-35 U1APN095"
+workspace 7 output "Lenovo Group Limited L28u-35 U1APN095"
 
 workspace 10 output HDMI-A-2
-#Assign Firefox to workspace #1
-assign [class="firefox"] → 4
 
 #Assign Postman to WS# 2
-assign [class="Postman"] → 2
+assign [app_id="postman"] → 2
 
 #Assign File Manager to WS #3
-assign [class="Pcmanfm"] → 3
+assign [app_id="pcmanfm"] → 3
 
-#Assign VS Code to WS #4
+#Assign Firefox to workspace #4
+assign [app_id="firefox"] → 4
+
+#Assign VS Code to WS #6
 assign [app_id="code-oss"] → 6
 
-#Assign Signal to WS #6
-assign [class="Slack"] → 7
+#Assign Signal to WS #7
+assign [app_id="Slack"] → 7
 
-#Assign Slack to WS #6
-assign [class="Signal"] → 7
+#Assign Slack to WS #7
+assign [app_id="signal"] → 7
+
+#Assign Virt-Manager to Workspace #9
+assign [app_id="virt-manager"] → 9
+###############################################################################
+
 
 ###############################################################################
 #Launch default programs
@@ -319,20 +277,10 @@ exec startup
 exec sway_background
 
 # Notification Deamon
-exec dunst
+exec mako
 
 # Tmux Scripts
 exec tmuxDev
 ###############################################################################
 
-
-###############################################################################
-# automatically start i3-config-wizard to offer the user to create a
-# keysym-based config which used their favorite modifier (alt or windows)
-#
-# i3-config-wizard will not launch if there already is a config file
-# in ~/.i3/config.
-#
-# Please remove the following exec line:
-###############################################################################
-#exec i3-config-wizard
+include /etc/sway/config.d/*

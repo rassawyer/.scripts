@@ -1,9 +1,9 @@
 #! /bin/sh
 
-if [[ "$(tmux ls | grep -c Chazak)" != 1 ]]; then
+if [[ "$(tmux ls | grep -c Default)" != 1 ]]; then
 
 	## Create Tmux Server
-	tmux new -s Chazak -d
+	tmux new -s Default -d
 
 	## Window #1
 		tmux rename-window -t Home
@@ -15,7 +15,6 @@ if [[ "$(tmux ls | grep -c Chazak)" != 1 ]]; then
 #		tmux send-keys 'cd ~/Code/Integro/ClickUp/integro' C-m
 #		tmux send-keys '. github' C-m
 #		tmux send-keys 'pnpm api' 
-
 
 	## Window #2
 		tmux new-window -n  nnn
@@ -35,6 +34,6 @@ if [[ "$(tmux ls | grep -c Chazak)" != 1 ]]; then
 		tmux send-keys 'irssi' C-m
 fi
 
-## Attach to Server
-tmux attach -t Chazak
+# Attach to Server
+tmux attach -t Default
 

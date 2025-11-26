@@ -5,6 +5,8 @@ chromium &
 # postman &
 
 ## Mostly using nnn on laptop, so this line is can be started as needed, rather than always.
-# pcmanfm &
+pcmanfm &
 signal-desktop &
 slack &
+virt-manager &
+

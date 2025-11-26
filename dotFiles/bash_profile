@@ -2,8 +2,8 @@
 # ~/.bash_profile
 #
 ## Start keyring, and add ssh keys to it. 
-
 # gnome-keyring-daemon --start >> /dev/null
+
 export VISUAL=/usr/bin/vim
 export EDITOR=$VISUAL
 export PATH="/usr/lib/ccache/bin/:$HOME/.scripts/:$PATH"
@@ -15,9 +15,13 @@ ssh-add $HOME/.ssh/github
 dbus-update-activation-environment --systemd DISPLAY
 
 ## Start NVM and Bash Auto-Complete.
-source /usr/share/nvm/init-nvm.sh
-source /usr/share/doc/pkgfile/command-not-found.bash
+# source /usr/share/nvm/init-nvm.sh
+# source /usr/share/doc/pkgfile/command-not-found.bash
+udiskie &
 
 ## Run .bashrc for this session.
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+
+# Created by `pipx` on 2024-10-02 00:45:33
+export PATH="$PATH:/home/rassawyer/.local/bin"

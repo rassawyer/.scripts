@@ -1,12 +1,13 @@
 #!/bin/sh
+killall swaybg
 pidof swaybg > /dev/null
 if [[ $? -ne 0 ]] ; then
-	swaybg -i $(find /home/rassawyer/.wallpaper/ -type f | shuf -n1) -m fit &
+	swaybg -i $HOME/.wallpaper/$(ls $HOME/.wallpaper/ | shuf -n1) -m fit &
 	OLD_PID=$!
 	echo $OLD_PID
 	while true; do
 		sleep 300
-		swaybg -i $(find /home/rassawyer/.wallpaper/ -type f | shuf -n1) -m fit &
+		swaybg -i $HOME/.wallpaper/$(ls $HOME/.wallpaper/ | shuf -n1) -m fit &
 		NEXT_PID=$!
 		sleep 1
 		kill $OLD_PID
