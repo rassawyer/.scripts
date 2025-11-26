@@ -1,0 +1,6 @@
+# This file is just a placeholder, so that future me doesn't get concerned
+# wondering why it doesn't exist.
+
+# Currently, the only things that are actually getting ignored are a bunch of
+# things in the config dir, so see the .gitignore in there is you are looking
+# for what is actually ignored/included.

@@ -10,6 +10,10 @@
 !zsh/
 !alacritty/
 
+#EXCEPT: ignore history files
+zsh/.zhistory
+zsh/.zhistory.lock
+
 # WM / bar / notifications / launcher
 !sway/
 !waybar/
