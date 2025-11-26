@@ -4,18 +4,21 @@ if [[ "$*" == "+"  ]]; then
 	pactl -- set-sink-volume alsa_output.pci-0000_0d_00.3.5.analog-stereo +1%
 	pactl -- set-sink-volume alsa_output.usb-Generic_USB_Audio_200901010001-00.HiFi__hw_Dock__sink +1%
 	pactl -- set-sink-volume alsa_output.usb-Focusrite_Scarlett_2i2_USB-00.analog-stereo +1%
-	wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
+	wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 1%+
+	echo "Volume UP" >> volup.txt
 
 elif [[ "$*" == "-" ]]; then
 	pactl -- set-sink-volume alsa_output.pci-0000_0d_00.3.5.analog-stereo -1%
 	pactl -- set-sink-volume alsa_output.usb-Generic_USB_Audio_200901010001-00.HiFi__hw_Dock__sink -1%
 	pactl -- set-sink-volume alsa_output.usb-Focusrite_Scarlett_2i2_USB-00.analog-stereo -1%
-	wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-
+	wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 3%-
+	echo "Volume DOWN" >> voldown.txt
 
 elif [[ "$*" == "m"  ]]; then
 	pactl -- set-sink-mute alsa_output.pci-0000_0d_00.3.5.analog-stereo toggle
 	pactl -- set-sink-mute alsa_output.usb-Generic_USB_Audio_200901010001-00.HiFi__hw_Dock__sink toggle
 	pactl -- set-sink-mute alsa_output.usb-Focusrite_Scarlett_2i2_USB-00.analog-stereo toggle 
 	wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+	echo "Volume MUTE" >> volmute.txt
 
 fi
