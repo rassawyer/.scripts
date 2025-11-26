@@ -245,29 +245,35 @@ workspace 7 output "Lenovo Group Limited L28u-35 U1APN095"
 
 workspace 10 output HDMI-A-2
 
-#Assign Postman to WS# 2
+# Desktop #1 assignments
 assign [app_id="postman"] → 2
 
-#Assign File Manager to WS #3
+# Desktop #2 assignments
 assign [app_id="pcmanfm"] → 3
 
-#Assign File Manager to WS #3
+# Desktop #3 assignments
 assign [app_id="thunar"] → 3
 
-#Assign Firefox to workspace #4
+# Desktop #4 assignments
 assign [app_id="firefox"] → 4
 
-#Assign VS Code to WS #6
+# Desktop #5 assignments
 assign [app_id="code-oss"] → 6
 
-#Assign Signal to WS #7
-assign [app_id="Slack"] → 7
+# Desktop #6 assignments
 
-#Assign Slack to WS #7
+# Desktop #7 assignments
+assign [app_id="Slack"] → 7
 assign [app_id="signal"] → 7
 
-#Assign Virt-Manager to Workspace #9
+# Desktop #8 assignments
+assign [app_id="spotify"] → 7
+
+# Desktop #9 assignments
 assign [app_id="virt-manager"] → 9
+
+# Desktop #0 assignments
+
 ###############################################################################
 
 
