@@ -26,8 +26,8 @@ if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
 	fi
 fi
 ##EXPORTS#######################################################################
-export PATH="/usr/lib/ccache/bin/:$HOME/.scripts/:$HOME/.scripts/i3scripts/:$PATH"
-export VISUAL=vim
+export PATH="/usr/lib/ccache/bin/:$HOME/.scripts/:$PATH"
+export VISUAL=/usr/bin/vim
 export EDITOR="$VISUAL"
 export TO_OR=32
 ################################################################################
@@ -67,6 +67,14 @@ PS1='[\u@\h \W]\$ '
 ## export USE_PREBUILT_CHROMIUM=1
 ################################################################################
 dbus-update-activation-environment --systemd DISPLAY
-gnome-keyring-daemon --start >> /dev/null
+# gnome-keyring-daemon --start >> /dev/null
 source /usr/share/nvm/init-nvm.sh
 source /usr/share/doc/pkgfile/command-not-found.bash
+
+# pnpm
+export PNPM_HOME="/home/rassawyer/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -47,7 +47,11 @@ fi
 udiskie &
 numlockx &
 startup &
-accountable2you &
+dunst &
+# Add Custom $PATH locations to $PATH
+export VISUAL=/usr/bin/vim
+export EDITOR=$VISUAL
+export PATH="/usr/lib/ccache/bin/:$HOME/.scripts/:$PATH"
 exec i3
 
 #exec sway
