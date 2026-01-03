@@ -8,6 +8,8 @@
 
 # Shell / terminal
 !zsh/
+!zsh/zshenv
+!zsh/alias.conf
 !alacritty/
 
 #EXCEPT: ignore history files
