@@ -1,0 +1,17 @@
+#!/bin/sh -xu
+# If run by qbtuser or systemd service, $HOME may not be yours — better to use explicit paths
+
+filebot -script fn:amc \
+	"/home/qbtuser/Downloads/Completed/" \
+  --output "/home/rassawyer/Media/Plex" \
+  --action hardlink \
+  --format "{plex}" \
+  --conflict auto \
+  -non-strict \
+  --log-file "/home/rassawyer/Media/amc.log" \
+  --def subtitles=en \
+        clean=y \
+        unsorted=y \
+        music=y \
+        artwork=y \
+        excludeList="/home/rassawyer/Media/amc.txt"

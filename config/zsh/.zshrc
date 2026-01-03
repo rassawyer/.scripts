@@ -54,7 +54,7 @@ if ! { [ "$TERM" = "tmux-256color" ] && [ -n "$TMUX" ]; } then
 	fi
 fi
 ## Add deno completions to search path ########################################
-if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then export FPATH="$HOME/.zsh/completions:$FPATH"; fi
+# if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then export FPATH="$HOME/.zsh/completions:$FPATH"; fi
 
 # Lines configured by zsh-newuser-install #####################################
 bindkey -v

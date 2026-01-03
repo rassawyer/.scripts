@@ -1,5 +1,9 @@
 #! /bin/bash
+
 firefox &
+## I use VIM way more than VS Code, so this line is only kept for reference
+## the arguments passed to code-oss are necessary to allow it to run correctly
+## on Wayland/Sway
 # code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland &
 ## consider uncommenting this line when working on backend/api design.
 # postman &
