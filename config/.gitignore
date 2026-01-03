@@ -1,0 +1,64 @@
+# Ignore everything by default in this config root
+*
+!.gitignore
+
+##########
+# CORE DOTFILES YOU PROBABLY WANT IN GIT
+##########
+
+# Shell / terminal
+!zsh/
+!alacritty/
+
+#EXCEPT: ignore history files
+zsh/.zhistory
+zsh/.zhistory.lock
+
+# WM / bar / notifications / launcher
+!sway/
+!waybar/
+!mako/
+!rofi/
+
+# Systemd user units (timers/services you define)
+!systemd/
+
+# CLI tools & small configs that are nice to keep
+!htop/
+!nnn/
+!archey3.cfg
+
+##########
+# OPTIONAL: UNCOMMENT IF YOU WANT THESE TRACKED
+##########
+
+# GTK themes / appearance (safe, but can be noisy)
+#!gtk-2.0/
+#!gtk-3.0/
+
+# File managers / DE bits
+!Thunar/
+!xfce4/
+
+##########
+# INTENTIONALLY **NOT** TRACKED BY DEFAULT
+#
+# These dirs/apps often contain:
+# - tokens, auth, secrets
+# - large cache/state
+# - "recent files" and local-only noise
+#
+# If you REALLY want one, just add a `!dirname/` line above.
+##########
+
+# Browsers / Electron / big GUIs / comms:
+# chromium, Code - OSS, discord, Slack, Signal, teams, torbrowser,
+# onedrive, onedrive-gui, ngrok, rclone, keepassxc, PrusaSlicer, etc.
+# (They exist here but we let `*` ignore them.)
+
+# Local cache / state dirs
+# cache/
+# local/
+
+# Audio / video / heavy apps
+# blender, FreeCAD, GIMP, obs-studio, unity3d, etc.

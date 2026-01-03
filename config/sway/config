@@ -1,0 +1,300 @@
+#Search parameters are added for use in Vi/Vim, allowing me to quickly jump to specific setting section with related keywords.
+#
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font 'Fira Code':monospace 8
+
+# use these keys for focus, movement, and resize directions when reaching for
+# the arrows is not convenient
+set $up k
+set $down j
+set $left h
+set $right l
+
+# use Mouse+Mod4 to drag floating windows to their wanted position
+floating_modifier Mod4
+
+# start a terminal
+bindsym Mod4+Return exec xterm
+
+# kill focused window
+bindsym Mod4+Shift+q kill
+
+# start dmenu (a program launcher)
+bindsym Mod4+d exec rofi -show combi
+
+# change focus
+bindsym Mod4+$left focus left
+bindsym Mod4+$down focus down
+bindsym Mod4+$up focus up
+bindsym Mod4+$right focus right
+
+# alternatively, you can use the cursor keys:
+bindsym Mod4+Left focus left
+bindsym Mod4+Down focus down
+bindsym Mod4+Up focus up
+bindsym Mod4+Right focus right
+
+# move focused window
+bindsym Mod4+Shift+$left move left
+bindsym Mod4+Shift+$down move down
+bindsym Mod4+Shift+$up move up
+bindsym Mod4+Shift+$right move right
+
+# alternatively, you can use the cursor keys:
+bindsym Mod4+Shift+Left move left
+bindsym Mod4+Shift+Down move down
+bindsym Mod4+Shift+Up move up
+bindsym Mod4+Shift+Right move right
+
+# split in horizontal orientation
+bindsym Mod4+b split h
+
+# split in vertical orientation
+bindsym Mod4+v split v
+
+# enter fullscreen mode for the focused container
+bindsym Mod4+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym Mod4+s layout stacking
+bindsym Mod4+w layout tabbed
+bindsym Mod4+e layout toggle split
+
+# toggle tiling / floating
+bindsym Mod4+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym Mod4+space focus mode_toggle
+
+# focus the parent container
+bindsym Mod4+a focus parent
+
+# focus the child container
+# bindsym Mod4+d focus child
+
+# move the currently focused window to the scratchpad
+bindsym Mod4+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym Mod4+minus scratchpad show
+
+# switch to workspace
+bindsym Mod4+1 workspace 1
+bindsym Mod4+2 workspace 2
+bindsym Mod4+3 workspace 3
+bindsym Mod4+4 workspace 4
+bindsym Mod4+5 workspace 5
+bindsym Mod4+6 workspace 6
+bindsym Mod4+7 workspace 7
+bindsym Mod4+8 workspace 8
+bindsym Mod4+9 workspace 9
+bindsym Mod4+0 workspace 10
+
+# move focused container to workspace
+bindsym Mod4+Shift+1 move container to workspace 1
+bindsym Mod4+Shift+2 move container to workspace 2
+bindsym Mod4+Shift+3 move container to workspace 3
+bindsym Mod4+Shift+4 move container to workspace 4
+bindsym Mod4+Shift+5 move container to workspace 5
+bindsym Mod4+Shift+6 move container to workspace 6
+bindsym Mod4+Shift+7 move container to workspace 7
+bindsym Mod4+Shift+8 move container to workspace 8
+bindsym Mod4+Shift+9 move container to workspace 9
+bindsym Mod4+Shift+0 move container to workspace 10
+
+# reload the configuration file
+bindsym Mod4+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym Mod4+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym Mod4+Shift+e exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit Sway? This will end your Wayland session.' -b 'Yes, exit Sway' 'swaymsg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym $left       resize shrink width 10 px or 10 ppt
+        bindsym $down       resize grow height 10 px or 10 ppt
+        bindsym $up         resize shrink height 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym Mod4+r mode "resize"
+###############################################################################
+
+
+###############################################################################
+include colorscheme
+bar {
+
+	swaybar_command waybar
+}
+###############################################################################
+
+
+###############################################################################
+### Idle configuration
+#
+# Example configuration:
+#
+exec lockscreen
+
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+###############################################################################
+
+
+###############################################################################
+# Custom keybindings [Audio] (Search parameters: volume, audio, mute, unmute)
+# alsa controls
+#bindsym --release XF86AudioRaiseVolume exec amixer sset Master 1%+
+#bindsym --release XF86AudioLowerVolume exec amixer sset Master 1%-
+#bindsym --release XF86AudioMute exec amixer set Master toggle
+
+#PulseAudio controls
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+bindsym Mod4+F3 exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+bindsym Mod4+F2 exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindsym Mod4+F1 exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+#bindsym Mod4+0xffc6 exec amixer sset Master 100%-
+#bindsym Mod4+0xffc7 exec amixer sset Master 5%-
+#bindsym Mod4+0xffc8 exec amixer sset Master 5%+
+#bindsym Mod4+0xffc9 exec amixer sset Master 100%+
+
+
+#Custom keybindings [Media] (Search parameters: media, multi-media, multimedia, play, pause, skip)
+bindsym --release XF86AudioNext exec playerctl next
+bindsym --release XF86AudioPrev exec playerctl previous
+bindsym --release XF86AudioPlay exec playerctl play-pause
+bindsym --release XF86NotificationCenter exec swaymsg input type:touchpad events toggle enabled disabled
+
+# Custom keybindings [Backlight] (Search parameters: brightness)
+bindsym --release XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym --release XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym --release Super_L+F5 exec xbacklight -inc 2
+bindsym --release Super_L+F4 exec xbacklight -dec 2
+
+# Custom keybindings [Sleep] (Search parameters: sleep)
+bindsym --release XF86Sleep exec swaylock -f -i /home/rassawyer/.scripts/dotFiles/res/wallpapers/$(ls /home/rassawyer/.scripts/dotFiles/res/wallpapers/ | shuf -n 1)
+
+# Custom keybinding [Misc.] (Search parameters: eject, programs, terminal)
+bindsym --release XF86Eject exec eject
+bindsym Mod4+t exec alacritty
+bindsym Mod4+m exec music
+bindsym Mod4+p exec vlc
+bindsym Mod4+g exec gimp
+bindsym Mod4+i exec inkscape
+# Take a screenshot with all output and save it into screenshots
+bindsym Print exec grim -t jpeg ~/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
+
+# Take a Screenshot with the region select
+bindsym Mod4+Print exec grim -t jpeg -g "$(slurp)" ~/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
+################################################################################
+
+
+################################################################################
+# Set Numlock on at start
+input 1:1:AT_Translated_Set_2_keyboard xkb_numlock enabled
+input type:touchpad {
+        tap enabled
+}
+################################################################################
+
+
+################################################################################
+# Set correct display positions
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+output * adaptive_sync on
+
+output "Acer Technologies G276HL LW9AA01385A6" pos 0 0
+output "Lenovo Group Limited L28u-35 U1APN095" pos 0 1080
+output "Lenovo Group Limited 0x41B7 Unknown" pos 1920 960
+output "Lenovo Group Limited L28u-35 U1APN095" scale 2
+
+# Custom Application/Workspace bindings
+# Workspace to monitor bindings
+workspace 1 output "Acer Technologies G276HL LW9AA01385A6"
+workspace 2 output "Acer Technologies G276HL LW9AA01385A6"
+workspace 3 output "Acer Technologies G276HL LW9AA01385A6"
+
+workspace 4 output "Lenovo Group Limited L28u-35 U1APN095"
+workspace 5 output "Lenovo Group Limited L28u-35 U1APN095"
+workspace 6 output "Lenovo Group Limited L28u-35 U1APN095"
+workspace 7 output "Lenovo Group Limited L28u-35 U1APN095"
+
+workspace 10 output HDMI-A-2
+
+# Desktop #1 assignments
+assign [app_id="postman"] → 2
+
+# Desktop #2 assignments
+assign [app_id="pcmanfm"] → 3
+
+# Desktop #3 assignments
+assign [app_id="thunar"] → 3
+
+# Desktop #4 assignments
+assign [app_id="firefox"] → 4
+
+# Desktop #5 assignments
+assign [app_id="code-oss"] → 6
+
+# Desktop #6 assignments
+
+# Desktop #7 assignments
+assign [app_id="Slack"] → 7
+assign [app_id="signal"] → 7
+
+# Desktop #8 assignments
+assign [app_id="spotify"] → 7
+
+# Desktop #9 assignments
+assign [app_id="virt-manager"] → 9
+
+# Desktop #0 assignments
+
+###############################################################################
+
+
+###############################################################################
+#Launch default programs
+#
+# Add SSH Keys for Integro's BitBucket account
+exec ssh-add ~/.ssh/bitbucket
+
+# Script that starts my normal programs on login
+exec startup
+
+# Script to handle lock screen
+exec sway_background
+
+# Notification Deamon
+exec mako
+
+# Tmux Scripts
+exec tmuxDev
+
+###############################################################################
+
+include /etc/sway/config.d/*

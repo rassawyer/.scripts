@@ -1,0 +1,148 @@
+{
+	"layer": "bottom",
+		"position": "top",
+		"height": 25,
+		"spacing": 5,
+		"modules-left": ["sway/workspaces","sway/mode","privacy","network","network#wifi"],
+		"modules-center": [
+			"custom/left-arrow-dark",
+		"clock#1",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"clock#2",
+		"custom/right-arrow-dark",
+		"custom/right-arrow-light",
+		"clock#3",
+		"custom/right-arrow-dark"
+		],
+		"modules-right": ["idle_inhibitor","cpu","memory","root","disk","battery","wireplumber","tray"],
+
+		"custom/left-arrow-dark": {
+			"format": "",
+			"tooltip": false
+		},
+
+		"custom/left-arrow-light": {
+			"format": "",
+			"tooltip": false
+		},
+
+		"custom/right-arrow-dark": {
+			"format": "",
+			"tooltip": false
+		},
+
+		"custom/right-arrow-light": {
+			"format": "",
+			"tooltip": false
+		},
+		"network": {
+			"format": "{ifname}",
+			"format-ethernet": "{ipaddr}/{cidr} 🖧",
+			"format-disconnected": "⚠",
+			"tooltip-format": "{ifname} via {gwaddr} 󰊗",
+			"tooltip-format-disconnected": "{ifname} Disconnected",
+			"max-length": 50
+		},
+
+		"network#wifi": {
+			"interface": "wlp2s0",
+			"format": "{ifname}",
+			"format-wifi": "{essid} ({signalStrength}%) ",
+			"format-disconnected": "⚠",
+			"tooltip-format": "{ifname} via {gwaddr} 󰊗",
+			"tooltip-format-disconnected": "Disconnected",
+			"max-length": 50
+		},
+		"privacy": {
+			"icon-spacing": 4,
+			"icon-size": 18,
+			"transition-duration": 250,
+			"modules": [
+			{
+				"type": "screenshare",
+				"tooltip": true,
+				"tooltip-icon-size": 24
+			},
+			{
+				"type": "audio-out",
+				"tooltip": true,
+				"tooltip-icon-size": 24
+			},
+			{
+				"type": "audio-in",
+				"tooltip": true,
+				"tooltip-icon-size": 24
+			}
+			]
+		},
+
+		"battery": {
+			"states": {
+				"good": 95,
+				"warning": 30,
+				"critical": 15
+			},
+			"format": "{icon} {capacity}%",
+			"format-icons": [
+				"",
+			"",
+			"",
+			"",
+			""
+			]
+		},
+
+		"clock#1": {
+			"format": "{:%a}",
+			"tooltip": false
+		},
+
+		"clock#2": {
+			"interval": 1,
+			"format": "{:%H:%M:%S}",
+			"tooltip": false
+		},
+
+		"clock#3": {
+			"format": "{:%d-%m-%y}",
+			"tooltip": false
+		},
+
+		"wireplumber": {
+			"format": "{volume}% {icon}",
+			"format-muted": "",
+			"on-click": "helvum",
+			"format-icons": ["", "", ""],
+			"on-click-right": "pavucontrol"
+		},
+
+		"memory": {
+			"interval": 60,
+			"format": "Mem {}%"
+		},
+
+		"cpu": {
+			"interval": 60,
+			"format": "CPU {usage:2}%"
+		},
+
+		"disk": {
+			"interval": 60,
+			"format": "Disk {percentage_used:2}%",
+			"path": "/home/"
+		},
+
+		"root": {
+			"interval": 60,
+			"format": "Root {percentage_Used:2}%",
+			"path": "/"
+		},
+
+		"tray": {
+			"icon-size": 20
+		}
+
+
+}
+
