@@ -50,4 +50,3 @@ done
 date +"%Y-%m-%d %H:%M:%S" > "$LAST_RUN_FILE"
 
 echo "Permissions update complete!"
-

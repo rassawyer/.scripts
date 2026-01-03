@@ -1,5 +1,4 @@
 #!/bin/sh -xu
-
 # If run by qbtuser or systemd service, $HOME may not be yours — better to use explicit paths
 
 filebot -script fn:amc \
@@ -16,4 +15,3 @@ filebot -script fn:amc \
         music=y \
         artwork=y \
         excludeList="/home/rassawyer/Media/amc.txt"
-

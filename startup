@@ -1,12 +1,14 @@
 #! /bin/bash
-chromium &
+
+firefox &
+## I use VIM way more than VS Code, so this line is only kept for reference
+## the arguments passed to code-oss are necessary to allow it to run correctly
+## on Wayland/Sway
 # code-oss --enable-features=UseOzonePlatform --ozone-platform=wayland &
 ## consider uncommenting this line when working on backend/api design.
 # postman &
 
-## Mostly using nnn on laptop, so this line is can be started as needed, rather than always.
-pcmanfm &
+thunar &
 signal-desktop &
 slack &
 virt-manager &
-
