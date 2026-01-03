@@ -8,7 +8,9 @@
 
 # Shell / terminal
 !zsh/
+!zsh/**
 !alacritty/
+!alacritty/**
 
 #EXCEPT: ignore history files
 zsh/.zhistory
@@ -16,16 +18,23 @@ zsh/.zhistory.lock
 
 # WM / bar / notifications / launcher
 !sway/
+!sway/**
 !waybar/
+!waybar/**
 !mako/
+!mako/**
 !rofi/
+!rofi/**
 
 # Systemd user units (timers/services you define)
 !systemd/
+!systemd/**
 
 # CLI tools & small configs that are nice to keep
 !htop/
+!htop/**
 !nnn/
+!nnn/**
 !archey3.cfg
 
 ##########
@@ -38,7 +47,9 @@ zsh/.zhistory.lock
 
 # File managers / DE bits
 !Thunar/
+!Thunar/**
 !xfce4/
+!xfce4/**
 
 ##########
 # INTENTIONALLY **NOT** TRACKED BY DEFAULT
