@@ -1,5 +1,5 @@
 exec swayidle -w \
-         timeout 180 'swaylock -f -i /home/rassawyer/.wallpaper/LockScreen/$(ls /home/rassawyer/.wallpaper/LockScreen | shuf -n 1)' \
+         timeout 180 'swaylock -f -i /home/rassawyer/.scripts/dotFiles/res/wallpapers/$(ls /home/rassawyer/.scripts/dotFiles/res/wallpapers/ | shuf -n 1)' \
          timeout 1200 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"' \
 			timeout 2500 'hibernate' \

@@ -1,64 +1,35 @@
-###############################################################################
+################################################################################
 ## install neccesary packages
 pacman -S --needed git
-###############################################################################
+################################################################################
 
-###############################################################################
+################################################################################
 ## git clone repo and all of the resources
 git pull https://github.com/rassawyer/.scripts.git
-###############################################################################
+################################################################################
 
-###############################################################################
-## remove existing .bashrc, if any exists, and softlink to custom version
-if [ ! -f $HOME/.bashrc ]; then
-	rm -rfv $HOME/.bashrc
-fi	
-rm -rfv $HOME/.bashrc
-ln -sf $HOME/.scripts/dotFiles/bashrc $HOME/.bashrc
-###############################################################################
-
-###############################################################################
-## check if neccesary directories exist, create them if they do not, then
-## create softlinks to custom files.
-if [ ! -d $HOME/.config ]; then
-	mkdir $HOME/.config
-fi
-if [ ! -d $HOME/.config/i3 ]; then
-	mkdir $HOME/.config/i3
+################################################################################
+## check if neccesary directories exist, create them if they do not
+if [ -d "$HOME/.config" ]; then
+	echo "Backing up .config"
+	mv "$HOME/.config" "$HOME/.config_$(date +%Y%m%d_%H%M%S).bak"
+	echo "Deleting .config"
+	rm -rf "$HOME/.config"
 fi
 
-if [ ! -d $HOME/.scripts ]; then
-	mkdir $HOME/.scripts
+if [ ! -L "$HOME/.config" ]; then
+    echo "Creating symlink for ~/.config"
+    ln -s "$HOME/.scripts/dotFiles" "$HOME/.config"
 fi
+################################################################################
 
-if [ ! -d $HOME/.bak ]; then
-	mkdir $HOME/.bak
-fi
-###############################################################################
+################################################################################
+## Create symlinks for the zsh config files.
+ln -sf "$HOME/.scripts/dotFiles/zshenv" "$HOME/.zshenv"
+################################################################################
 
-###############################################################################
-## remove existing i3 config file, and replace with a softlink to custom 
-## version
-if [ ! -f $HOME/.config/i3/config ]; then
-	rm -rfv $HOME/.config/i3/config
-fi
-rm -rfv $HOME/.config/i3/config
-ln -sf $HOME/.scripts/dotFiles/i3 $HOME/.config/i3/config
-###############################################################################
-
-###############################################################################
+################################################################################
 ## setup Android build utilities and directories
 curl https://storage.googleapis.com/git-repo-downloads/repo > $HOME/.scripts/repo
-chmod a+x $HOME/.scripts/repo
-###############################################################################
-
-###############################################################################
-## remove existing i3blocks config file, if present, and replace with softlink 
-## to custom version.
-## remove $HOME/.xinitrc and replace with softlink to custom version
-if [ ! -f $HOME/.xinitrc ]; then
-	rm -rfv $HOME/.xinitrc
-fi
-rm -rfv $HOME/.xinitrc
-ln -sf $HOME/.scripts/dotFiles/xinitrc $HOME/.xinitrc
-###############################################################################
+chmod a+x "$HOME/.scripts/repo"
+################################################################################

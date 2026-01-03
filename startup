@@ -8,7 +8,13 @@ firefox &
 ## consider uncommenting this line when working on backend/api design.
 # postman &
 
+## Mostly using nnn on laptop, so this line is can be started as needed, rather than always.
 thunar &
 signal-desktop &
 slack &
 virt-manager &
+streamdeck -n &
+wl-clipboard-manager -t &
+wl-clipboard-history -t &
+udiskie &
+
