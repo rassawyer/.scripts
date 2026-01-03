@@ -1,3 +1,3 @@
 #!/bin/sh -xu
 
-filebot -script fn:amc --output "$HOME/Media/Plex" --action duplicate --format {plex} --conflict auto -non-strict "$HOME/Media/New" --log-file amc.log --def subtitles=en clean=y unsorted=y music=y artwork=y 
+filebot -script fn:amc --output "$HOME/Media/Plex" --action hardlink --format {plex} --conflict auto -non-strict "$HOME/Media/Plex/Downloads/Completed" --log-file amc.log --def excludesList=amc.txt subtitles=en clean=y unsorted=y music=y artwork=y 
